@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\brickBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\brickBlock.xnb</Output>
       <Time>2014-04-14T23:48:37.0576464-04:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\hiddenBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\hiddenBlock.xnb</Output>
       <Time>2014-04-14T23:48:37.0606484-04:00</Time>
     </Item>
     <Item>
@@ -25,7 +25,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\questionBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\questionBlock.xnb</Output>
       <Time>2014-04-14T23:48:37.0726568-04:00</Time>
     </Item>
     <Item>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\stairPyramidBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\stairPyramidBlock.xnb</Output>
       <Time>2014-04-14T23:48:37.1086804-04:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\usedBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\usedBlock.xnb</Output>
       <Time>2014-04-14T23:48:37.0956718-04:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\mario.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\mario.xnb</Output>
       <Time>2014-04-14T23:48:37.2747912-04:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\small_mario_moving.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_moving.xnb</Output>
       <Time>2014-04-14T23:48:37.3038105-04:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\small_mario_idle.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_idle.xnb</Output>
       <Time>2014-04-14T23:48:37.2857989-04:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Items\oneUpMushroomSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\oneUpMushroomSprite.xnb</Output>
       <Time>2014-04-14T23:48:37.1447044-04:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Items\coinSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\coinSprite.xnb</Output>
       <Time>2014-04-14T23:48:37.1326969-04:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Items\fireFlowerSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\fireFlowerSprite.xnb</Output>
       <Time>2014-04-14T23:48:37.1336971-04:00</Time>
     </Item>
     <Item>
@@ -106,7 +106,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Items\mushroomSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\mushroomSprite.xnb</Output>
       <Time>2014-04-14T23:48:37.1587138-04:00</Time>
     </Item>
     <Item>
@@ -115,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Items\starSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\starSprite.xnb</Output>
       <Time>2014-04-14T23:48:37.1967391-04:00</Time>
     </Item>
     <Item>
@@ -124,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\small_mario_jump.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_jump.xnb</Output>
       <Time>2014-04-14T23:48:37.2948054-04:00</Time>
     </Item>
     <Item>
@@ -133,7 +133,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\big_mario_crouch.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_crouch.xnb</Output>
       <Time>2014-04-14T23:48:37.1947382-04:00</Time>
     </Item>
     <Item>
@@ -142,7 +142,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\big_mario_idle.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_idle.xnb</Output>
       <Time>2014-04-14T23:48:37.2177536-04:00</Time>
     </Item>
     <Item>
@@ -151,7 +151,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\big_mario_jump.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_jump.xnb</Output>
       <Time>2014-04-14T23:48:37.2047462-04:00</Time>
     </Item>
     <Item>
@@ -160,7 +160,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\big_mario_moving.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_moving.xnb</Output>
       <Time>2014-04-14T23:48:37.2277598-04:00</Time>
     </Item>
     <Item>
@@ -169,7 +169,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\fire_mario_crouch.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_crouch.xnb</Output>
       <Time>2014-04-14T23:48:37.2297624-04:00</Time>
     </Item>
     <Item>
@@ -178,7 +178,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\fire_mario_idle.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_idle.xnb</Output>
       <Time>2014-04-14T23:48:37.2437713-04:00</Time>
     </Item>
     <Item>
@@ -187,7 +187,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\fire_mario_jump.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_jump.xnb</Output>
       <Time>2014-04-14T23:48:37.2407685-04:00</Time>
     </Item>
     <Item>
@@ -196,7 +196,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\fire_mario_moving.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_moving.xnb</Output>
       <Time>2014-04-14T23:48:37.2657852-04:00</Time>
     </Item>
     <Item>
@@ -205,7 +205,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Marios\small_mario_dead.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_dead.xnb</Output>
       <Time>2014-04-14T23:48:37.2777932-04:00</Time>
     </Item>
     <Item>
@@ -214,7 +214,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Enemies\goombaSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\goombaSprite.xnb</Output>
       <Time>2014-04-14T23:48:37.1276931-04:00</Time>
     </Item>
     <Item>
@@ -223,7 +223,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Enemies\koopaSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\koopaSprite.xnb</Output>
       <Time>2014-04-14T23:48:37.1617166-04:00</Time>
     </Item>
     <Item>
@@ -232,7 +232,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\floorBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock.xnb</Output>
       <Time>2014-03-17T21:55:32.1859117-04:00</Time>
     </Item>
     <Item>
@@ -241,7 +241,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\bluePortalBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bluePortalBlock.xnb</Output>
       <Time>2014-04-20T20:36:03.3669125-04:00</Time>
     </Item>
     <Item>
@@ -250,7 +250,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\orangePortalBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\orangePortalBlock.xnb</Output>
       <Time>2014-04-20T20:36:03.3338905-04:00</Time>
     </Item>
     <Item>
@@ -259,7 +259,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Misc\flagPole.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\flagPole.xnb</Output>
       <Time>2014-04-20T20:36:03.3519016-04:00</Time>
     </Item>
     <Item>
@@ -268,7 +268,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Misc\bluePortal.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bluePortal.xnb</Output>
       <Time>2014-04-20T21:07:13.022165-04:00</Time>
     </Item>
     <Item>
@@ -277,7 +277,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Misc\orangePortal.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\orangePortal.xnb</Output>
       <Time>2014-04-20T21:07:13.0211643-04:00</Time>
     </Item>
     <Item>
@@ -286,7 +286,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Blocks\bounceBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bounceBlock.xnb</Output>
       <Time>2014-04-20T22:27:59.8470647-04:00</Time>
     </Item>
     <Item>
@@ -295,7 +295,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Instructions\instructionMove.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionMove.xnb</Output>
       <Time>2014-04-20T22:51:27.2651295-04:00</Time>
     </Item>
     <Item>
@@ -304,7 +304,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Instructions\instructionSwitch.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionSwitch.xnb</Output>
       <Time>2014-04-20T23:21:25.9434991-04:00</Time>
     </Item>
     <Item>
@@ -313,7 +313,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Misc\bigHill.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bigHill.xnb</Output>
       <Time>2014-04-21T03:47:13.6548954-04:00</Time>
     </Item>
     <Item>
@@ -322,8 +322,8 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Music\main_theme.xnb</Output>
-      <Extra>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Music\main_theme.wma</Extra>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.xnb</Output>
+      <Extra>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.wma</Extra>
       <Time>2014-04-14T23:48:38.7571982-04:00</Time>
     </Item>
     <Item>
@@ -332,7 +332,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\HudFont.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\HudFont.xnb</Output>
       <Time>2014-04-14T23:48:37.0576464-04:00</Time>
     </Item>
     <Item>
@@ -341,7 +341,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\PauseFont.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\PauseFont.xnb</Output>
       <Time>2014-04-14T23:48:37.0586471-04:00</Time>
     </Item>
     <Item>
@@ -350,7 +350,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\small_jump.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\small_jump.xnb</Output>
       <Time>2014-04-14T23:48:37.5241664-04:00</Time>
     </Item>
     <Item>
@@ -359,7 +359,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\kick.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\kick.xnb</Output>
       <Time>2014-04-14T23:48:37.3418641-04:00</Time>
     </Item>
     <Item>
@@ -368,7 +368,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\coin.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\coin.xnb</Output>
       <Time>2014-04-14T23:48:37.3649179-04:00</Time>
     </Item>
     <Item>
@@ -377,7 +377,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\powerup.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup.xnb</Output>
       <Time>2014-04-14T23:48:37.5261677-04:00</Time>
     </Item>
     <Item>
@@ -386,7 +386,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\breakblock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\breakblock.xnb</Output>
       <Time>2014-04-14T23:48:37.3919471-04:00</Time>
     </Item>
     <Item>
@@ -395,7 +395,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\powerdown.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerdown.xnb</Output>
       <Time>2014-04-14T23:48:37.4340388-04:00</Time>
     </Item>
     <Item>
@@ -404,7 +404,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\mariodie.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\mariodie.xnb</Output>
       <Time>2014-04-14T23:48:37.5903122-04:00</Time>
     </Item>
     <Item>
@@ -413,7 +413,7 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\Sounds\powerup_appears.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup_appears.xnb</Output>
       <Time>2014-04-14T23:48:37.502153-04:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
@@ -423,10 +423,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902ProjectContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOLContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>

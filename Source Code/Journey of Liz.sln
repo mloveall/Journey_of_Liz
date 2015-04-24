@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOL", "CSE3902Project\CSE3902Project\JOL.csproj", "{83AA472C-CC58-4ABC-8070-1188C8D313D8}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOL", "Journey of Liz\JOL\JOL.csproj", "{83AA472C-CC58-4ABC-8070-1188C8D313D8}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOLContent", "CSE3902Project\CSE3902ProjectContent\JOLContent.contentproj", "{564BE414-7C68-4012-AD48-94B887EC83E2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOLContent", "Journey of Liz\JOLContent\JOLContent.contentproj", "{564BE414-7C68-4012-AD48-94B887EC83E2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

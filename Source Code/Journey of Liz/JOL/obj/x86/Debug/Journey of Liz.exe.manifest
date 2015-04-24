@@ -100,28 +100,10 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>i3UEdYBJRMR2+TFIfdTz7cY5txE=</dsig:DigestValue>
+        <dsig:DigestValue>c/z+KWOKfTP5rW25peZIeZFLYGw=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="Code Reviews\Sprint3CodeQualityReview.txt" size="1819">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>Gh4dasRrqcOjAxB8T4QxLL+tX8E=</dsig:DigestValue>
-    </hash>
-  </file>
-  <file name="Code Reviews\Sprint3ReadabilityReview.txt" size="1785">
-    <hash>
-      <dsig:Transforms>
-        <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
-      </dsig:Transforms>
-      <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>5pJ53nEkaDB9hSxhdE2BmsbFWNA=</dsig:DigestValue>
-    </hash>
-  </file>
   <file name="Content\Blocks\bluePortalBlock.xnb" size="12475">
     <hash>
       <dsig:Transforms>
@@ -479,7 +461,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>GPp8vngNBhF9Lo26Gib0Hy2rikE=</dsig:DigestValue>
+      <dsig:DigestValue>KYDUJK1BtYnQNT8pCkFuJco1EtA=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\main_theme.xnb" size="128">

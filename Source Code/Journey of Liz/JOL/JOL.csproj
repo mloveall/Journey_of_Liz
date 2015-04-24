@@ -72,7 +72,7 @@
     <ManifestCertificateThumbprint>60E110B488BBDC6945733370D697CDF5496A5B48</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>CSE3902Project_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>JOL_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -226,13 +226,11 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Known Bugs.txt" />
-    <Content Include="Code Reviews\Sprint3CodeQualityReview.txt" />
-    <Content Include="Code Reviews\Sprint3ReadabilityReview.txt" />
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CSE3902ProjectContent\JOLContent.contentproj">
+    <ProjectReference Include="..\JOLContent\JOLContent.contentproj">
       <Name>JOLContent %28Content%29</Name>
       <XnaReferenceType>Content</XnaReferenceType>
       <Project>{564BE414-7C68-4012-AD48-94B887EC83E2}</Project>
@@ -261,7 +259,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
-    <None Include="CSE3902Project_TemporaryKey.pfx" />
+    <None Include="JOL_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup />
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
