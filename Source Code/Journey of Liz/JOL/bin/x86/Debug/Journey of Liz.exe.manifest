@@ -281,16 +281,16 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>4qnccKvUHG4grFL4wxj9HFatRQQ=</dsig:DigestValue>
+      <dsig:DigestValue>xzZMYx/4JRNnSLCfwCX7wg3XJbU=</dsig:DigestValue>
     </hash>
   </file>
-  <file name="Content\Levels\level1.csv" size="7960">
+  <file name="Content\Levels\level1.csv" size="9304">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>6yj+H20BJFT/Wf7xSTUezysvfEc=</dsig:DigestValue>
+      <dsig:DigestValue>7q+Cx5QlHlJR+JFiIMJSQPu/jZY=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Levels\level2.csv" size="10338">
