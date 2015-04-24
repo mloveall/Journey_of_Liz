@@ -6,18 +6,6 @@ EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "JOLContent", "CSE3902Project\CSE3902ProjectContent\JOLContent.contentproj", "{564BE414-7C68-4012-AD48-94B887EC83E2}"
 EndProject
 Global
-	GlobalSection(TeamFoundationVersionControl) = preSolution
-		SccNumberOfProjects = 3
-		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
-		SccTeamFoundationServer = https://matthew-r-swisher.visualstudio.com/defaultcollection
-		SccProjectUniqueName0 = CSE3902Project\\CSE3902Project\\JOL.csproj
-		SccProjectName0 = CSE3902Project/CSE3902Project
-		SccLocalPath0 = CSE3902Project\\CSE3902Project
-		SccProjectUniqueName1 = CSE3902Project\\CSE3902ProjectContent\\JOLContent.contentproj
-		SccProjectName1 = CSE3902Project/CSE3902ProjectContent
-		SccLocalPath1 = CSE3902Project\\CSE3902ProjectContent
-		SccLocalPath2 = .
-	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x86 = Debug|x86
 		Release|x86 = Release|x86

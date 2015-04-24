@@ -100,7 +100,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>cui2WZ3wwY1mYYncUySxNBZy67U=</dsig:DigestValue>
+        <dsig:DigestValue>i3UEdYBJRMR2+TFIfdTz7cY5txE=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -479,7 +479,7 @@
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-      <dsig:DigestValue>gvieDfNpgf8F0daZqnpNwnUGUY4=</dsig:DigestValue>
+      <dsig:DigestValue>GPp8vngNBhF9Lo26Gib0Hy2rikE=</dsig:DigestValue>
     </hash>
   </file>
   <file name="Content\Music\main_theme.xnb" size="128">
