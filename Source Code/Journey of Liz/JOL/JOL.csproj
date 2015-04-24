@@ -1,0 +1,273 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <ProjectGuid>{83AA472C-CC58-4ABC-8070-1188C8D313D8}</ProjectGuid>
+    <ProjectTypeGuids>{6D335F3A-9D43-41b4-9D22-F6F17C4BE596};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>JOL</RootNamespace>
+    <AssemblyName>Journey of Liz</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <XnaFrameworkVersion>v4.0</XnaFrameworkVersion>
+    <XnaPlatform>Windows</XnaPlatform>
+    <XnaProfile>HiDef</XnaProfile>
+    <XnaCrossPlatformGroupID>5f848b7e-f576-4178-bb31-96bf44c0a623</XnaCrossPlatformGroupID>
+    <XnaOutputType>Game</XnaOutputType>
+    <ApplicationIcon>Game.ico</ApplicationIcon>
+    <Thumbnail>GameThumbnail.png</Thumbnail>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+    <PublishUrl>C:\Users\Mitchell\Desktop\ProjectDemo\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\x86\Debug</OutputPath>
+    <DefineConstants>DEBUG;TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>false</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\x86\Release</OutputPath>
+    <DefineConstants>TRACE;WINDOWS</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <NoStdLib>true</NoStdLib>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <PlatformTarget>x86</PlatformTarget>
+    <XnaCompressContent>true</XnaCompressContent>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>60E110B488BBDC6945733370D697CDF5496A5B48</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>CSE3902Project_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.Xna.Framework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Game, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Graphics, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.GamerServices, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Xact, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Video, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Avatar, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Net, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="Microsoft.Xna.Framework.Storage, Version=4.0.0.0, Culture=neutral, PublicKeyToken=842cf8be1de50553, processorArchitecture=x86">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="mscorlib">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Core">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <Private>False</Private>
+    </Reference>
+    <Reference Include="System.Net">
+      <Private>False</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Classes\BlockClasses\BluePortalBlock.cs" />
+    <Compile Include="Classes\BlockClasses\BounceBlock.cs" />
+    <Compile Include="Classes\MiscClasses\BigHill.cs" />
+    <Compile Include="Classes\MiscClasses\InstructionTwo.cs" />
+    <Compile Include="Classes\MiscClasses\InstructionOne.cs" />
+    <Compile Include="Classes\MiscClasses\FlagPole.cs" />
+    <Compile Include="Classes\MiscClasses\KillZone.cs" />
+    <Compile Include="Classes\BlockClasses\OrangePortalBlock.cs" />
+    <Compile Include="Classes\MiscClasses\Portal.cs" />
+    <Compile Include="Commands\CharacterSwitchCommand.cs" />
+    <Compile Include="GUIs\WinScreen.cs" />
+    <Compile Include="Cameras\FollowCharacterCamera.cs" />
+    <Compile Include="Classes\BlockClasses\BrickBlock.cs" />
+    <Compile Include="Classes\ItemClasses\CoinItem.cs" />
+    <Compile Include="Classes\ItemContainerClasses\EmptyItemContainer.cs" />
+    <Compile Include="Classes\ItemContainerClasses\MultiItemContainer.cs" />
+    <Compile Include="Classes\ItemContainerClasses\SingleItemContainer.cs" />
+    <Compile Include="Classes\ItemClasses\StarItem.cs" />
+    <Compile Include="Classes\ItemContainerClasses\VariableItemContainer.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteBigCrouch.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteBigIdle.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteBigJumping.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteBigRunning.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteDead.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteFireCrouch.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteFireIdle.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteFireJumping.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteFireRunning.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteSmallCrouch.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteSmallIdle.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteSmallJumping.cs" />
+    <Compile Include="Classes\MarioClasses\MarioSpriteSmallRunning.cs" />
+    <Compile Include="Collisions\CollisionDetection.cs" />
+    <Compile Include="Collisions\CollisionHandler.cs" />
+    <Compile Include="Commands\PauseCommand.cs" />
+    <Compile Include="Commands\ResetCommand.cs" />
+    <Compile Include="Commands\SmallStateCommand.cs" />
+    <Compile Include="Classes\BlockClasses\FloorBlock.cs" />
+    <Compile Include="Classes\BlockClasses\HiddenBlock.cs" />
+    <Compile Include="Classes\ItemClasses\DeadMushroomItem.cs" />
+    <Compile Include="GUIs\HeadsUpDisplay.cs" />
+    <Compile Include="Interfaces\IBlock.cs" />
+    <Compile Include="Interfaces\ICamera.cs" />
+    <Compile Include="Interfaces\IDeletable.cs" />
+    <Compile Include="Interfaces\IItemContainer.cs" />
+    <Compile Include="Interfaces\IMarioSprite.cs" />
+    <Compile Include="Commands\BigStateCommand.cs" />
+    <Compile Include="Commands\FireStateCommand.cs" />
+    <Compile Include="Commands\ToggleCrouchIdleJumpCommand.cs" />
+    <Compile Include="Commands\ToggleJumpIdleCrouchCommand.cs" />
+    <Compile Include="Commands\ToggleToLeftCommand.cs" />
+    <Compile Include="Commands\ToggleToRightCommand.cs" />
+    <Compile Include="Commands\DeadStateCommand.cs" />
+    <Compile Include="Classes\ItemClasses\FireFlowerItem.cs" />
+    <Compile Include="Controllers\GamePadController.cs" />
+    <Compile Include="Classes\EnemyClasses\GoombaEnemy.cs" />
+    <Compile Include="Interfaces\IAnimatedSprite.cs" />
+    <Compile Include="Interfaces\ICommand.cs" />
+    <Compile Include="Interfaces\IController.cs" />
+    <Compile Include="Interfaces\IEnemy.cs" />
+    <Compile Include="Interfaces\IItem.cs" />
+    <Compile Include="Interfaces\IMarioState.cs" />
+    <Compile Include="Controllers\KeyboardController.cs" />
+    <Compile Include="Classes\EnemyClasses\KoopaEnemy.cs" />
+    <Compile Include="Level Builders\Level.cs" />
+    <Compile Include="Level Builders\LevelBuilder.cs" />
+    <Compile Include="Mario States\BigCrouchMarioState.cs" />
+    <Compile Include="Mario States\BigIdleMarioState.cs" />
+    <Compile Include="Mario States\BigJumpingMarioState.cs" />
+    <Compile Include="Mario States\BigRunningMarioState.cs" />
+    <Compile Include="Mario States\CollectBlinkingMarioState.cs" />
+    <Compile Include="Mario States\DeadMarioState.cs" />
+    <Compile Include="Mario States\FireCrouchMarioState.cs" />
+    <Compile Include="Mario States\FireIdleMarioState.cs" />
+    <Compile Include="Mario States\FireJumpingMarioState.cs" />
+    <Compile Include="Mario States\FireRunningMarioState.cs" />
+    <Compile Include="Mario States\SmallCrouchMarioState.cs" />
+    <Compile Include="Mario States\SmallJumpingMarioState.cs" />
+    <Compile Include="Classes\MarioClasses\TransitionSprite.cs" />
+    <Compile Include="Mario\Mario.cs" />
+    <Compile Include="Mario\MarioSpriteFactory.cs" />
+    <Compile Include="Classes\ItemClasses\MushroomItem.cs" />
+    <Compile Include="Mario\MultiMarioHolder.cs" />
+    <Compile Include="GUIs\PauseMenu.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Game1.cs" />
+    <Compile Include="Commands\QuitCommand.cs" />
+    <Compile Include="Mario States\SmallIdleMarioState.cs" />
+    <Compile Include="Mario States\SmallRunningMarioState.cs" />
+    <Compile Include="Classes\BlockClasses\QuestionBlock.cs" />
+    <Compile Include="Classes\BlockClasses\StairBlock.cs" />
+    <Compile Include="Classes\BlockClasses\UsedBlock.cs" />
+    <Compile Include="Classes\ItemClasses\OneUpMushroomItem.cs" />
+    <Compile Include="Cameras\StaticCamera.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Known Bugs.txt" />
+    <Content Include="Code Reviews\Sprint3CodeQualityReview.txt" />
+    <Content Include="Code Reviews\Sprint3ReadabilityReview.txt" />
+    <Content Include="Game.ico" />
+    <Content Include="GameThumbnail.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CSE3902ProjectContent\JOLContent.contentproj">
+      <Name>JOLContent %28Content%29</Name>
+      <XnaReferenceType>Content</XnaReferenceType>
+      <Project>{564BE414-7C68-4012-AD48-94B887EC83E2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0,Profile=Client">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 Client Profile %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="CSE3902Project_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\Microsoft.Xna.GameStudio.targets" />
+  <!--
+      To modify your build process, add your task inside one of the targets below and uncomment it. 
+      Other similar extension points exist, see Microsoft.Common.targets.
+      <Target Name="BeforeBuild">
+      </Target>
+      <Target Name="AfterBuild">
+      </Target>
+    -->
+</Project>

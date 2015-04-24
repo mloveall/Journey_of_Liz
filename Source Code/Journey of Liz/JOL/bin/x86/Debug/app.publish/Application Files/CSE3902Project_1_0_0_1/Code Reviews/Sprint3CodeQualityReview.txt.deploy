@@ -1,0 +1,51 @@
+﻿
+    Matthew Swisher
+	02/19/14    
+	Sprint3 
+	LevelBuilder.cs
+	Ryan Kast
+	Comments:  Code is well organized, readable, and maintainable.  
+    Hypothetical change:  If new items or blocks are added to the game it would be very
+	easy to add new cases and update the level builder file.
+
+	Mitchell Loveall
+	2/28/2014    
+	Sprint 3 
+	CollisionDetection.cs
+	Matthew Swisher
+	Comments:
+	    It functions perfectly and the code is readable. Its structure is well-
+		organized and maintainable.  
+    Hypothetical change:
+	    For now this class can handle most of the cases even for extra features
+		that could be added in the future. If it couldn't handle one then changes
+		can be easily made and its functionality can be easily updated.
+
+	-----------------------------------------------------------------------------------------------
+
+	Mitchell Loveall
+	3/11/2014    
+	Sprint 4 
+	CollisionHandler.cs
+	Ryan + Mitchell + Matthew
+	Comments:
+	    The code is easy to read and well-organized. It works well and is highly
+		maintainable if we want to make changes in the future.  
+    Hypothetical change:
+	    Currently the code may be too complicated for such a "handler" class. We
+		will work on it to make it simpler or just split it into several minor
+		classes. New features for collision will be added later.
+
+	-----------------------------------------------------------------------------------------------
+
+	Mitchell Loveall
+	3/23/2014    
+	Sprint 5 
+	PauseMenu.cs
+	Ryan Kast
+	Comments:
+	    The file is well organized, readable, and maintainable.  
+    Hypothetical change:
+	    Currently it is having too many contents/functions. It would be nice if
+		some of the pause functions can be moved to the other classes, so that
+		this class only does the handling work.
