@@ -69,10 +69,10 @@
     <XnaCompressContent>true</XnaCompressContent>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>60E110B488BBDC6945733370D697CDF5496A5B48</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>FE35304F6B8A30CB8F1D5CA557829A6F6739B83E</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestKeyFile>JOL_TemporaryKey.pfx</ManifestKeyFile>
+    <ManifestKeyFile>JOL_1_TemporaryKey.pfx</ManifestKeyFile>
   </PropertyGroup>
   <PropertyGroup>
     <GenerateManifests>true</GenerateManifests>
@@ -259,6 +259,7 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <None Include="JOL_1_TemporaryKey.pfx" />
     <None Include="JOL_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup />
