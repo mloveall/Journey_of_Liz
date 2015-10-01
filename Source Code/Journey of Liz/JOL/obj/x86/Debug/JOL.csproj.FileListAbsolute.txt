@@ -118,10 +118,6 @@ C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\obj\
 C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\obj\x86\Debug\Journey of Liz.application
 C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\obj\x86\Debug\Journey of Liz.exe
 C:\Users\Mitchell\Desktop\CSE3902\Source Code\CSE3902Project\CSE3902Project\obj\x86\Debug\Journey of Liz.pdb
-C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\JOL.csprojResolveAssemblyReference.cache
-C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.exe
-C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.pdb
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\brickBlock.xnb
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\hiddenBlock.xnb
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\questionBlock.xnb
@@ -172,9 +168,14 @@ C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x8
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Levels\level2.csv
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Levels\level1.csv
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Levels\level0.csv
-C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.exe.manifest
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.exe.manifest
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.application
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.exe
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.pdb
+C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\JOL.csprojResolveAssemblyReference.cache
+C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.TrustInfo.xml
+C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.exe.manifest
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.application
+C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.exe
+C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.pdb
