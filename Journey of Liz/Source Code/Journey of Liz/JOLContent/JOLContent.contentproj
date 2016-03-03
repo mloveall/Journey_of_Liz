@@ -75,27 +75,22 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Marios\mario.png">
-      <Name>mario</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Liz\liz_moving.png">
+      <Name>liz_moving</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Liz\liz_idle.png">
+      <Name>liz_idle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Marios\small_mario_moving.png">
-      <Name>small_mario_moving</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Marios\small_mario_idle.png">
-      <Name>small_mario_idle</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Items\oneUpMushroomSprite.png">
-      <Name>oneUpMushroomSprite</Name>
+    <Compile Include="Items\oneUpSprite.png">
+      <Name>oneUpSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -104,74 +99,74 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Items\fireFlowerSprite.png">
-      <Name>fireFlowerSprite</Name>
+    <Compile Include="Items\flowerSprite.png">
+      <Name>flowerSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Items\mushroomSprite.png">
-      <Name>mushroomSprite</Name>
+    <Compile Include="Items\hamieEggSprite.png">
+      <Name>hamieEggSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Items\starSprite.png">
-      <Name>starSprite</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-  </ItemGroup>
-  <ItemGroup>
-    <Compile Include="Marios\small_mario_jump.png">
-      <Name>small_mario_jump</Name>
+    <Compile Include="Items\coverageSprite.png">
+      <Name>coverageSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Marios\big_mario_crouch.png">
-      <Name>big_mario_crouch</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Marios\big_mario_idle.png">
-      <Name>big_mario_idle</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Marios\big_mario_jump.png">
-      <Name>big_mario_jump</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-    </Compile>
-    <Compile Include="Marios\big_mario_moving.png">
-      <Name>big_mario_moving</Name>
+    <Compile Include="Liz\liz_jump.png">
+      <Name>liz_jump</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Marios\fire_mario_crouch.png">
-      <Name>fire_mario_crouch</Name>
+    <Compile Include="Liz\liz_riding_crouch.png">
+      <Name>liz_riding_crouch</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Marios\fire_mario_idle.png">
-      <Name>fire_mario_idle</Name>
+    <Compile Include="Liz\liz_riding_idle.png">
+      <Name>liz_riding_idle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Marios\fire_mario_jump.png">
-      <Name>fire_mario_jump</Name>
+    <Compile Include="Liz\liz_riding_jump.png">
+      <Name>liz_riding_jump</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Marios\fire_mario_moving.png">
-      <Name>fire_mario_moving</Name>
+    <Compile Include="Liz\liz_riding_moving.png">
+      <Name>liz_riding_moving</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
-    <Compile Include="Marios\small_mario_dead.png">
-      <Name>small_mario_dead</Name>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Liz\liz_demo_crouch.png">
+      <Name>liz_demo_crouch</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Liz\liz_demo_idle.png">
+      <Name>liz_demo_idle</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Liz\liz_demo_jump.png">
+      <Name>liz_demo_jump</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Liz\liz_demo_moving.png">
+      <Name>liz_demo_moving</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Liz\liz_dead.png">
+      <Name>liz_dead</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -208,15 +203,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enemies\goombaSprite.png">
-      <Name>goombaSprite</Name>
+    <Compile Include="Enemies\shroomySprite.png">
+      <Name>shroomySprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Enemies\koopaSprite.png">
-      <Name>koopaSprite</Name>
+    <Compile Include="Enemies\hamieSprite.png">
+      <Name>hamieSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -262,8 +257,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Sounds\mariodie.wav">
-      <Name>mariodie</Name>
+    <Compile Include="Sounds\lizdie.wav">
+      <Name>lizdie</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
     </Compile>
@@ -276,8 +271,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Blocks\floorBlock.png">
-      <Name>floorBlock</Name>
+    <Compile Include="Blocks\floorBlock0.png">
+      <Name>floorBlock0</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
@@ -339,6 +334,48 @@
   <ItemGroup>
     <Compile Include="Misc\bigHill.png">
       <Name>bigHill</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\grassBlock.png">
+      <Name>grassBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\floorBlock1.png">
+      <Name>floorBlock1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\floorBlock2.png">
+      <Name>floorBlock2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\floorBlock3.png">
+      <Name>floorBlock3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Misc\cloud.png">
+      <Name>cloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Blocks\sandBlock.png">
+      <Name>sandBlock</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

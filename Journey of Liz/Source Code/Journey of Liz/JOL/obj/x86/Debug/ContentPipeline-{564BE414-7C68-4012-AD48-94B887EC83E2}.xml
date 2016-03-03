@@ -7,8 +7,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\brickBlock.xnb</Output>
-      <Time>2014-04-14T20:48:37.0576464-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\brickBlock.xnb</Output>
+      <Time>2015-11-22T18:14:41.9107553-08:00</Time>
     </Item>
     <Item>
       <Source>Blocks\hiddenBlock.png</Source>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\hiddenBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\hiddenBlock.xnb</Output>
       <Time>2014-04-14T20:48:37.0606484-07:00</Time>
     </Item>
     <Item>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\questionBlock.xnb</Output>
-      <Time>2014-04-14T20:48:37.0726568-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\questionBlock.xnb</Output>
+      <Time>2015-12-07T01:08:49.9552095-08:00</Time>
     </Item>
     <Item>
       <Source>Blocks\stairPyramidBlock.png</Source>
@@ -34,8 +34,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\stairPyramidBlock.xnb</Output>
-      <Time>2014-04-14T20:48:37.1086804-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\stairPyramidBlock.xnb</Output>
+      <Time>2015-11-22T18:47:49.040614-08:00</Time>
     </Item>
     <Item>
       <Source>Blocks\usedBlock.png</Source>
@@ -43,44 +43,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\usedBlock.xnb</Output>
-      <Time>2014-04-14T20:48:37.0956718-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\usedBlock.xnb</Output>
+      <Time>2015-12-07T01:11:00.4615022-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\mario.png</Source>
-      <Name>Marios\mario</Name>
+      <Source>Liz\liz_moving.png</Source>
+      <Name>Liz\liz_moving</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\mario.xnb</Output>
-      <Time>2014-04-14T20:48:37.2747912-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_moving.xnb</Output>
+      <Time>2015-12-07T01:18:41.5192069-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\small_mario_moving.png</Source>
-      <Name>Marios\small_mario_moving</Name>
+      <Source>Liz\liz_idle.png</Source>
+      <Name>Liz\liz_idle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_moving.xnb</Output>
-      <Time>2014-04-14T20:48:37.3038105-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_idle.xnb</Output>
+      <Time>2015-12-15T16:09:10.2167073-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\small_mario_idle.png</Source>
-      <Name>Marios\small_mario_idle</Name>
+      <Source>Items\oneUpSprite.png</Source>
+      <Name>Items\oneUpSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_idle.xnb</Output>
-      <Time>2014-04-14T20:48:37.2857989-07:00</Time>
-    </Item>
-    <Item>
-      <Source>Items\oneUpMushroomSprite.png</Source>
-      <Name>Items\oneUpMushroomSprite</Name>
-      <Importer>TextureImporter</Importer>
-      <Processor>TextureProcessor</Processor>
-      <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\oneUpMushroomSprite.xnb</Output>
-      <Time>2014-04-14T20:48:37.1447044-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\oneUpSprite.xnb</Output>
+      <Time>2015-12-15T14:19:27.2893038-08:00</Time>
     </Item>
     <Item>
       <Source>Items\coinSprite.png</Source>
@@ -88,152 +79,152 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\coinSprite.xnb</Output>
-      <Time>2014-04-14T20:48:37.1326969-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\coinSprite.xnb</Output>
+      <Time>2015-11-22T18:09:47.2481845-08:00</Time>
     </Item>
     <Item>
-      <Source>Items\fireFlowerSprite.png</Source>
-      <Name>Items\fireFlowerSprite</Name>
+      <Source>Items\flowerSprite.png</Source>
+      <Name>Items\flowerSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\fireFlowerSprite.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\flowerSprite.xnb</Output>
       <Time>2014-04-14T20:48:37.1336971-07:00</Time>
     </Item>
     <Item>
-      <Source>Items\mushroomSprite.png</Source>
-      <Name>Items\mushroomSprite</Name>
+      <Source>Items\hamieEggSprite.png</Source>
+      <Name>Items\hamieEggSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\mushroomSprite.xnb</Output>
-      <Time>2014-04-14T20:48:37.1587138-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\hamieEggSprite.xnb</Output>
+      <Time>2015-12-07T20:32:58.2532359-08:00</Time>
     </Item>
     <Item>
-      <Source>Items\starSprite.png</Source>
-      <Name>Items\starSprite</Name>
+      <Source>Items\coverageSprite.png</Source>
+      <Name>Items\coverageSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\starSprite.xnb</Output>
-      <Time>2014-04-14T20:48:37.1967391-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\coverageSprite.xnb</Output>
+      <Time>2015-12-08T15:35:29.8649525-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\small_mario_jump.png</Source>
-      <Name>Marios\small_mario_jump</Name>
+      <Source>Liz\liz_jump.png</Source>
+      <Name>Liz\liz_jump</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_jump.xnb</Output>
-      <Time>2014-04-14T20:48:37.2948054-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_jump.xnb</Output>
+      <Time>2015-12-15T16:10:46.3037255-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\big_mario_crouch.png</Source>
-      <Name>Marios\big_mario_crouch</Name>
+      <Source>Liz\liz_riding_crouch.png</Source>
+      <Name>Liz\liz_riding_crouch</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_crouch.xnb</Output>
-      <Time>2014-04-14T20:48:37.1947382-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_crouch.xnb</Output>
+      <Time>2015-12-15T14:25:22.306706-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\big_mario_idle.png</Source>
-      <Name>Marios\big_mario_idle</Name>
+      <Source>Liz\liz_riding_idle.png</Source>
+      <Name>Liz\liz_riding_idle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_idle.xnb</Output>
-      <Time>2014-04-14T20:48:37.2177536-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_idle.xnb</Output>
+      <Time>2015-12-07T01:14:48.7702503-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\big_mario_jump.png</Source>
-      <Name>Marios\big_mario_jump</Name>
+      <Source>Liz\liz_riding_jump.png</Source>
+      <Name>Liz\liz_riding_jump</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_jump.xnb</Output>
-      <Time>2014-04-14T20:48:37.2047462-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_jump.xnb</Output>
+      <Time>2015-12-07T01:14:33.8815548-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\big_mario_moving.png</Source>
-      <Name>Marios\big_mario_moving</Name>
+      <Source>Liz\liz_riding_moving.png</Source>
+      <Name>Liz\liz_riding_moving</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\big_mario_moving.xnb</Output>
-      <Time>2014-04-14T20:48:37.2277598-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_moving.xnb</Output>
+      <Time>2015-12-07T01:14:13.5461458-08:00</Time>
     </Item>
     <Item>
-      <Source>Marios\fire_mario_crouch.png</Source>
-      <Name>Marios\fire_mario_crouch</Name>
+      <Source>Liz\liz_demo_crouch.png</Source>
+      <Name>Liz\liz_demo_crouch</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_crouch.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_crouch.xnb</Output>
       <Time>2014-04-14T20:48:37.2297624-07:00</Time>
     </Item>
     <Item>
-      <Source>Marios\fire_mario_idle.png</Source>
-      <Name>Marios\fire_mario_idle</Name>
+      <Source>Liz\liz_demo_idle.png</Source>
+      <Name>Liz\liz_demo_idle</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_idle.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_idle.xnb</Output>
       <Time>2014-04-14T20:48:37.2437713-07:00</Time>
     </Item>
     <Item>
-      <Source>Marios\fire_mario_jump.png</Source>
-      <Name>Marios\fire_mario_jump</Name>
+      <Source>Liz\liz_demo_jump.png</Source>
+      <Name>Liz\liz_demo_jump</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_jump.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_jump.xnb</Output>
       <Time>2014-04-14T20:48:37.2407685-07:00</Time>
     </Item>
     <Item>
-      <Source>Marios\fire_mario_moving.png</Source>
-      <Name>Marios\fire_mario_moving</Name>
+      <Source>Liz\liz_demo_moving.png</Source>
+      <Name>Liz\liz_demo_moving</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\fire_mario_moving.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_moving.xnb</Output>
       <Time>2014-04-14T20:48:37.2657852-07:00</Time>
     </Item>
     <Item>
-      <Source>Marios\small_mario_dead.png</Source>
-      <Name>Marios\small_mario_dead</Name>
+      <Source>Liz\liz_dead.png</Source>
+      <Name>Liz\liz_dead</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Marios\small_mario_dead.xnb</Output>
-      <Time>2014-04-14T20:48:37.2777932-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_dead.xnb</Output>
+      <Time>2015-12-07T19:31:13.2552377-08:00</Time>
     </Item>
     <Item>
-      <Source>Enemies\goombaSprite.png</Source>
-      <Name>Enemies\goombaSprite</Name>
+      <Source>Enemies\shroomySprite.png</Source>
+      <Name>Enemies\shroomySprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\goombaSprite.xnb</Output>
-      <Time>2014-04-14T20:48:37.1276931-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\shroomySprite.xnb</Output>
+      <Time>2015-12-03T14:17:53.5221664-08:00</Time>
     </Item>
     <Item>
-      <Source>Enemies\koopaSprite.png</Source>
-      <Name>Enemies\koopaSprite</Name>
+      <Source>Enemies\hamieSprite.png</Source>
+      <Name>Enemies\hamieSprite</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\koopaSprite.xnb</Output>
-      <Time>2014-04-14T20:48:37.1617166-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\hamieSprite.xnb</Output>
+      <Time>2015-12-03T15:30:47.3152122-08:00</Time>
     </Item>
     <Item>
-      <Source>Blocks\floorBlock.png</Source>
-      <Name>Blocks\floorBlock</Name>
+      <Source>Blocks\floorBlock0.png</Source>
+      <Name>Blocks\floorBlock0</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock.xnb</Output>
-      <Time>2014-03-17T18:55:32.1859117-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock0.xnb</Output>
+      <Time>2015-11-21T22:43:01.1206754-08:00</Time>
     </Item>
     <Item>
       <Source>Blocks\bluePortalBlock.png</Source>
@@ -241,8 +232,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bluePortalBlock.xnb</Output>
-      <Time>2014-04-20T17:36:03.3669125-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bluePortalBlock.xnb</Output>
+      <Time>2015-12-15T14:34:42.2812677-08:00</Time>
     </Item>
     <Item>
       <Source>Blocks\orangePortalBlock.png</Source>
@@ -250,8 +241,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\orangePortalBlock.xnb</Output>
-      <Time>2014-04-20T17:36:03.3338905-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\orangePortalBlock.xnb</Output>
+      <Time>2015-12-15T14:34:23.2339207-08:00</Time>
     </Item>
     <Item>
       <Source>Misc\flagPole.png</Source>
@@ -259,8 +250,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\flagPole.xnb</Output>
-      <Time>2014-04-20T17:36:03.3519016-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\flagPole.xnb</Output>
+      <Time>2015-12-14T14:13:53.6893169-08:00</Time>
     </Item>
     <Item>
       <Source>Misc\bluePortal.png</Source>
@@ -268,8 +259,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bluePortal.xnb</Output>
-      <Time>2014-04-20T18:07:13.022165-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bluePortal.xnb</Output>
+      <Time>2015-12-15T14:27:50.5979554-08:00</Time>
     </Item>
     <Item>
       <Source>Misc\orangePortal.png</Source>
@@ -277,8 +268,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\orangePortal.xnb</Output>
-      <Time>2014-04-20T18:07:13.0211643-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\orangePortal.xnb</Output>
+      <Time>2015-12-15T14:27:31.9398532-08:00</Time>
     </Item>
     <Item>
       <Source>Blocks\bounceBlock.png</Source>
@@ -286,7 +277,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bounceBlock.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bounceBlock.xnb</Output>
       <Time>2014-04-20T19:27:59.8470647-07:00</Time>
     </Item>
     <Item>
@@ -295,8 +286,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionMove.xnb</Output>
-      <Time>2014-04-20T19:51:27.2651295-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionMove.xnb</Output>
+      <Time>2015-12-15T15:36:33.384691-08:00</Time>
     </Item>
     <Item>
       <Source>Instructions\instructionSwitch.png</Source>
@@ -304,8 +295,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionSwitch.xnb</Output>
-      <Time>2014-04-20T20:21:25.9434991-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionSwitch.xnb</Output>
+      <Time>2015-12-15T15:37:10.0940346-08:00</Time>
     </Item>
     <Item>
       <Source>Misc\bigHill.png</Source>
@@ -313,8 +304,62 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bigHill.xnb</Output>
-      <Time>2014-04-21T00:47:13.6548954-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bigHill.xnb</Output>
+      <Time>2015-11-22T00:10:51.9806311-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Blocks\grassBlock.png</Source>
+      <Name>Blocks\grassBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\grassBlock.xnb</Output>
+      <Time>2015-11-22T18:54:41.0450088-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Blocks\floorBlock1.png</Source>
+      <Name>Blocks\floorBlock1</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock1.xnb</Output>
+      <Time>2015-11-21T22:43:21.1910548-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Blocks\floorBlock2.png</Source>
+      <Name>Blocks\floorBlock2</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock2.xnb</Output>
+      <Time>2015-11-21T22:43:51.9225416-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Blocks\floorBlock3.png</Source>
+      <Name>Blocks\floorBlock3</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock3.xnb</Output>
+      <Time>2015-11-21T22:42:43.5249432-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Misc\cloud.png</Source>
+      <Name>Misc\cloud</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\cloud.xnb</Output>
+      <Time>2015-11-22T19:02:40.2753812-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Blocks\sandBlock.png</Source>
+      <Name>Blocks\sandBlock</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\sandBlock.xnb</Output>
+      <Time>2015-11-22T19:42:30.7828066-08:00</Time>
     </Item>
     <Item>
       <Source>Music\main_theme.mp3</Source>
@@ -322,9 +367,9 @@
       <Importer>Mp3Importer</Importer>
       <Processor>SongProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.xnb</Output>
-      <Extra>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.wma</Extra>
-      <Time>2014-04-14T20:48:38.7571982-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.xnb</Output>
+      <Extra>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.wma</Extra>
+      <Time>2015-04-05T09:59:05.2914108-07:00</Time>
     </Item>
     <Item>
       <Source>HudFont.spritefont</Source>
@@ -332,7 +377,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\HudFont.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\HudFont.xnb</Output>
       <Time>2014-04-14T20:48:37.0576464-07:00</Time>
     </Item>
     <Item>
@@ -341,7 +386,7 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\PauseFont.xnb</Output>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\PauseFont.xnb</Output>
       <Time>2014-04-14T20:48:37.0586471-07:00</Time>
     </Item>
     <Item>
@@ -350,8 +395,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\small_jump.xnb</Output>
-      <Time>2014-04-14T20:48:37.5241664-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\small_jump.xnb</Output>
+      <Time>2015-12-14T15:17:05.5349384-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\kick.wav</Source>
@@ -359,8 +404,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\kick.xnb</Output>
-      <Time>2014-04-14T20:48:37.3418641-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\kick.xnb</Output>
+      <Time>2015-12-14T15:46:35.6452472-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\coin.wav</Source>
@@ -368,8 +413,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\coin.xnb</Output>
-      <Time>2014-04-14T20:48:37.3649179-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\coin.xnb</Output>
+      <Time>2015-12-14T14:55:47.0326608-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\powerup.wav</Source>
@@ -377,8 +422,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup.xnb</Output>
-      <Time>2014-04-14T20:48:37.5261677-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup.xnb</Output>
+      <Time>2015-12-14T15:43:51.6854351-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\breakblock.wav</Source>
@@ -386,8 +431,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\breakblock.xnb</Output>
-      <Time>2014-04-14T20:48:37.3919471-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\breakblock.xnb</Output>
+      <Time>2015-12-14T15:27:14.4127313-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\powerdown.wav</Source>
@@ -395,17 +440,17 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerdown.xnb</Output>
-      <Time>2014-04-14T20:48:37.4340388-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerdown.xnb</Output>
+      <Time>2015-12-14T15:44:10.1721403-08:00</Time>
     </Item>
     <Item>
-      <Source>Sounds\mariodie.wav</Source>
-      <Name>Sounds\mariodie</Name>
+      <Source>Sounds\lizdie.wav</Source>
+      <Name>Sounds\lizdie</Name>
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\mariodie.xnb</Output>
-      <Time>2014-04-14T20:48:37.5903122-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\lizdie.xnb</Output>
+      <Time>2015-12-14T15:05:26.8470577-08:00</Time>
     </Item>
     <Item>
       <Source>Sounds\powerup_appears.wav</Source>
@@ -413,8 +458,8 @@
       <Importer>WavImporter</Importer>
       <Processor>SoundEffectProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup_appears.xnb</Output>
-      <Time>2014-04-14T20:48:37.502153-07:00</Time>
+      <Output>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup_appears.xnb</Output>
+      <Time>2015-12-14T15:28:11.1007334-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -423,10 +468,10 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOLContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOLContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
@@ -454,8 +499,8 @@
         <Value>2011-09-01T14:22:30-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-01-16T20:25:43.7968772-08:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2016-01-01T17:09:57.8409904-08:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

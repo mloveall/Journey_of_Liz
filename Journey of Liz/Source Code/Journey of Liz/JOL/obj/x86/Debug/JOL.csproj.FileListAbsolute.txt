@@ -179,3 +179,69 @@ C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x8
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.application
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.exe
 C:\Users\Mitchell\Documents\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.pdb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\brickBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\hiddenBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\questionBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\stairPyramidBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\usedBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\coinSprite.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bluePortalBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\orangePortalBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\flagPole.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bluePortal.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\orangePortal.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\bounceBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionMove.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Instructions\instructionSwitch.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\bigHill.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\HudFont.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\PauseFont.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\small_jump.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\kick.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\coin.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\breakblock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerdown.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\powerup_appears.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Music\main_theme.wma
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Levels\level2.csv
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Levels\level1.csv
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Levels\level0.csv
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.exe.manifest
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.application
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.exe
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Journey of Liz.pdb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\JOL.csprojResolveAssemblyReference.cache
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.TrustInfo.xml
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.exe.manifest
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.application
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.exe
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\obj\x86\Debug\Journey of Liz.pdb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\grassBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock0.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock1.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock2.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\floorBlock3.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Misc\cloud.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Blocks\sandBlock.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_moving.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_idle.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\oneUpSprite.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\flowerSprite.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\hamieEggSprite.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Items\coverageSprite.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_jump.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_crouch.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_idle.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_jump.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_riding_moving.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_crouch.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_idle.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_jump.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_demo_moving.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Liz\liz_dead.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\shroomySprite.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Enemies\hamieSprite.xnb
+C:\Users\Mitchell\Documents\Journey of Liz\Journey of Liz\Source Code\Journey of Liz\JOL\bin\x86\Debug\Content\Sounds\lizdie.xnb

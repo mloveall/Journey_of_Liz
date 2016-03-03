@@ -117,8 +117,9 @@ namespace JOL
                     }
                 case GameState.Playing:
                     {
+                        Color sky1 = new Color(49, 184, 206, 255);
                         if (levelNumber == 0)
-                            GraphicsDevice.Clear(Color.CornflowerBlue);
+                            GraphicsDevice.Clear(sky1);
                         else if (levelNumber == 1)
                             GraphicsDevice.Clear(Color.SandyBrown);
                         else if (levelNumber == 2)
