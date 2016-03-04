@@ -7,9 +7,9 @@ namespace JOL.Commands
 {
     class ToggleToRightCommand : ICommand
     {
-        MultiMarioHolder holder;
+        MultiPlayerHolder holder;
 
-        public ToggleToRightCommand(MultiMarioHolder holder)
+        public ToggleToRightCommand(MultiPlayerHolder holder)
         {
             this.holder = holder;
         }

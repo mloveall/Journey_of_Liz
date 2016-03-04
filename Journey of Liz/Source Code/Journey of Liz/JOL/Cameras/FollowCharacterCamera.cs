@@ -19,12 +19,12 @@ namespace JOL
 
         private int height, width;
         private Vector2 characterPreviousPosition;
-        private MultiMarioHolder marioHolder;
+        private MultiPlayerHolder marioHolder;
 
         // Constructor
-        public FollowCharacterCamera(MultiMarioHolder marioHolder, int height, int width)
+        public FollowCharacterCamera(MultiPlayerHolder marioHolder, int height, int width)
         {
-            characterPreviousPosition = new Vector2(marioHolder.getCurrentMario().MarioSprite.DestRectangle.X, marioHolder.getCurrentMario().MarioSprite.DestRectangle.Bottom) ;
+            characterPreviousPosition = new Vector2(marioHolder.getCurrentMario().PlayerSprite.destRectangle.X, marioHolder.getCurrentMario().PlayerSprite.destRectangle.Bottom) ;
             Position = new Vector2(characterPreviousPosition.X- width/2 , characterPreviousPosition.Y - height*(5f/8f));
             
             this.marioHolder = marioHolder;
@@ -36,7 +36,7 @@ namespace JOL
         public void Update(GameTime gameTime)
         {
             float deltaX, deltaY;
-            Vector2 characterCurrentPosition = new Vector2(marioHolder.getCurrentMario().MarioSprite.DestRectangle.X, marioHolder.getCurrentMario().MarioSprite.DestRectangle.Bottom);
+            Vector2 characterCurrentPosition = new Vector2(marioHolder.getCurrentMario().PlayerSprite.destRectangle.X, marioHolder.getCurrentMario().PlayerSprite.destRectangle.Bottom);
 
             deltaY = characterPreviousPosition.Y - characterCurrentPosition.Y;
             deltaX = characterCurrentPosition.X - characterPreviousPosition.X;

@@ -67,20 +67,20 @@ namespace JOL.Classes.BlockClasses
         // "SpriteBatch" will be the spritebatch used for this animation, "location" is where we want it drawn
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
+            Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
             if (isAlive)
             {
                 Rectangle sourceRectangle = new Rectangle(width*currentFrame,0, width,height);
-                spriteBatch.Draw(aliveTexture, destRectangle, sourceRectangle, Color.White);
+                spriteBatch.Draw(aliveTexture, relativeDestRectangle, sourceRectangle, Color.White);
             }
             else
             {
-                spriteBatch.Draw(usedTexture, destRectangle, Color.White);
+                spriteBatch.Draw(usedTexture, relativeDestRectangle, Color.White);
             }
         }
 
         // Bump is called when Mario hits the bottom of the block
-        public void Bump(Mario mario)
+        public void Bump(Player mario)
         {
             bool isSmallMario = false;
             if (mario.MyState == 1)

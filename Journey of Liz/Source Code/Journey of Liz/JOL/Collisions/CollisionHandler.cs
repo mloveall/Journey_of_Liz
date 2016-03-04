@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using JOL.Interfaces;
-using JOL.Classes.MarioClasses;
+using JOL.PlayerStates;
+using JOL.Classes.PlayerClasses;
 using JOL.Classes.BlockClasses;
 using JOL.Classes.MiscClasses;
 
@@ -16,7 +17,7 @@ namespace JOL
     public static class CollisionHandler
     {
         // Constructor
-        static public void HandleCollisions(Mario mario, Mario luigi, List<IBlock> blocks, List<IEnemy> enemies, List<KillZone> killZones, FlagPole flagPole, List<Portal> portals, ICamera camera, List<IItem> items)
+        static public void HandleCollisions(Player mario, Player luigi, List<IBlock> blocks, List<IEnemy> enemies, List<KillZone> killZones, FlagPole flagPole, List<Portal> portals, ICamera camera, List<IItem> items)
         {
             HandleBlockCollisions(mario, blocks);
             HandleBlockCollisions(luigi, blocks);
@@ -40,69 +41,69 @@ namespace JOL
         }
 
         // Take care of the collisions between Mario and blocks
-        static private void HandleBlockCollisions(Mario mario, List<IBlock> blocks)
+        static private void HandleBlockCollisions(Player mario, List<IBlock> blocks)
         {
             foreach (IBlock block in blocks)
             {
-                CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.MarioSprite.DestRectangle, block.DestRectangle);
+                CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.PlayerSprite.destRectangle, block.DestRectangle);
                 switch (collision)
                 {
                     case CollisionDetection.CollisionType.NoCollision:
                         // Do nothing.
                         break;
                     case CollisionDetection.CollisionType.TopCollision: // Top is colliding with something
-                        if (mario.MarioSprite.FallSpeed >= 0f)
+                        if (mario.PlayerSprite.fallSpeed >= 0f)
                         {
-                            if (mario.MyState == 1 && mario.MarioSprite.IsMoving == false && mario.MarioSprite.IsJumping)
+                            if (mario.MyState == 1 && mario.PlayerSprite.isMoving == false && mario.PlayerSprite.isJumping)
                             {
-                                mario.State = new SmallIdleMarioState(mario);
-                                mario.MarioSprite = new MarioSpriteSmallIdle(mario.MarioSprite);
+                                mario.State = new PlayerStateSmallIdle(mario);
+                                mario.PlayerSprite = new PlayerSpriteSmallIdle(mario.PlayerSprite);
                             }
-                            else if (mario.MyState == 1 && mario.MarioSprite.IsJumping)
+                            else if (mario.MyState == 1 && mario.PlayerSprite.isJumping)
                             {
-                                mario.State = new SmallRunningMarioState(mario);
-                                mario.MarioSprite = new MarioSpriteSmallRunning(mario.MarioSprite);
+                                mario.State = new PlayerStateSmallRunning(mario);
+                                mario.PlayerSprite = new PlayerSpriteSmallRunning(mario.PlayerSprite);
                             }
-                            if (mario.MyState == 2 && mario.MarioSprite.IsMoving == false && mario.MarioSprite.IsJumping)
+                            if (mario.MyState == 2 && mario.PlayerSprite.isMoving == false && mario.PlayerSprite.isJumping)
                             {
                                 mario.State = new BigIdleMarioState(mario);
-                                mario.MarioSprite = new MarioSpriteBigIdle(mario.MarioSprite);
+                                mario.PlayerSprite = new PlayerSpriteBigIdle(mario.PlayerSprite);
                             }
-                            else if (mario.MyState == 2 && mario.MarioSprite.IsJumping)
+                            else if (mario.MyState == 2 && mario.PlayerSprite.isJumping)
                             {
                                 mario.State = new BigRunningMarioState(mario);
-                                mario.MarioSprite = new MarioSpriteBigRunning(mario.MarioSprite);
+                                mario.PlayerSprite = new PlayerSpriteBigRunning(mario.PlayerSprite);
                             }
-                            if (mario.MyState == 3 && mario.MarioSprite.IsMoving == false && mario.MarioSprite.IsJumping)
+                            if (mario.MyState == 3 && mario.PlayerSprite.isMoving == false && mario.PlayerSprite.isJumping)
                             {
                                 mario.State = new FireIdleMarioState(mario);
-                                mario.MarioSprite = new MarioSpriteFireIdle(mario.MarioSprite);
+                                mario.PlayerSprite = new PlayerSpriteFireIdle(mario.PlayerSprite);
                             }
-                            else if (mario.MyState == 3 && mario.MarioSprite.IsJumping)
+                            else if (mario.MyState == 3 && mario.PlayerSprite.isJumping)
                             {
-                                mario.State = new FireRunningMarioState(mario);
-                                mario.MarioSprite = new MarioSpriteFireRunning(mario.MarioSprite);
+                                mario.State = new PlayerStateDemoRunning(mario);
+                                mario.PlayerSprite = new PlayerSpriteFireRunning(mario.PlayerSprite);
                             }
 
-                            mario.MarioSprite.FallSpeed = 0f;
-                            mario.MoveTo((int)mario.MarioSprite.SpritePosition.X, block.DestRectangle.Top - mario.MarioSprite.DestRectangle.Height + 1);
+                            mario.PlayerSprite.fallSpeed = 0f;
+                            mario.MoveTo((int)mario.PlayerSprite.spritePosition.X, block.DestRectangle.Top - mario.PlayerSprite.destRectangle.Height + 1);
                         }
                         break;
                     case CollisionDetection.CollisionType.BottomCollision: // Bottom is colliding with something
-                        if (mario.MarioSprite.FallSpeed < 0f && mario.MyState != 0)
+                        if (mario.PlayerSprite.fallSpeed < 0f && mario.MyState != 0)
                         {
-                            mario.MoveTo((int)mario.MarioSprite.SpritePosition.X, block.DestRectangle.Bottom + 1);
+                            mario.MoveTo((int)mario.PlayerSprite.spritePosition.X, block.DestRectangle.Bottom + 1);
                             block.Bump(mario);
-                            mario.MarioSprite.FallSpeed = 0f;
+                            mario.PlayerSprite.fallSpeed = 0f;
                         }
                         break;
                     case CollisionDetection.CollisionType.LeftCollision: // Left is colliding with something
                         if (mario.MyState != 0)
-                            mario.MoveTo(block.DestRectangle.Right + 1, (int)mario.MarioSprite.SpritePosition.Y);
+                            mario.MoveTo(block.DestRectangle.Right + 1, (int)mario.PlayerSprite.spritePosition.Y);
                         break;
                     case CollisionDetection.CollisionType.RightCollision: // Right is colliding with something
                         if (mario.MyState != 0)
-                            mario.MoveTo(block.DestRectangle.Left - mario.MarioSprite.DestRectangle.Width - 1, (int)mario.MarioSprite.SpritePosition.Y);
+                            mario.MoveTo(block.DestRectangle.Left - mario.PlayerSprite.destRectangle.Width - 1, (int)mario.PlayerSprite.spritePosition.Y);
                         break;
                     default:
                         break;
@@ -262,13 +263,13 @@ namespace JOL
         }
 
         // Take care of the collisions between Mario and items
-        static private void HandleItemCollisions(Mario mario, List<IItem> items)
+        static private void HandleItemCollisions(Player mario, List<IItem> items)
         {
             foreach (IItem item in items)
             {
                 if (item.isActive)
                 {
-                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.MarioSprite.DestRectangle, item.DestRectangle);
+                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.PlayerSprite.destRectangle, item.DestRectangle);
                     switch (collision)
                     {
                         case CollisionDetection.CollisionType.NoCollision:
@@ -287,13 +288,13 @@ namespace JOL
         }
 
         // Take care of the collisions between Mario and enemies
-        static private void HandleEnemyCollisions(Mario mario, List<IEnemy> enemies)
+        static private void HandleEnemyCollisions(Player mario, List<IEnemy> enemies)
         {
             if (enemies != null)
             {
                 foreach (IEnemy enemy in enemies)
                 {
-                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.MarioSprite.DestRectangle, enemy.DestRectangle);
+                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.PlayerSprite.destRectangle, enemy.DestRectangle);
                     if (collision != CollisionDetection.CollisionType.NoCollision && mario.MyState != 0)
                     {
                         bool hitMario = enemy.Hit(collision, true);
@@ -306,7 +307,7 @@ namespace JOL
                         }
                         else
                         {
-                            mario.MarioSprite.FallSpeed = -7.4f;
+                            mario.PlayerSprite.fallSpeed = -7.4f;
                         }
                     }
                 }
@@ -314,9 +315,9 @@ namespace JOL
         }
 
         // Take care of the collisions between Mario1 and Mario2
-        static private void HandleMarioLuigiCollisions(Mario mario, Mario luigi)
+        static private void HandleMarioLuigiCollisions(Player mario, Player luigi)
         {
-            Mario currentMario, pausedMario;
+            Player currentMario, pausedMario;
             if (mario.isPaused)
             {
                 currentMario = luigi;
@@ -327,63 +328,63 @@ namespace JOL
                 currentMario = mario;
                 pausedMario = luigi;
             }
-            CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(currentMario.MarioSprite.DestRectangle, pausedMario.MarioSprite.DestRectangle);
+            CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(currentMario.PlayerSprite.destRectangle, pausedMario.PlayerSprite.destRectangle);
             switch (collision)
             {
                 case CollisionDetection.CollisionType.NoCollision:
                     // Do nothing.
                     break;
                 case CollisionDetection.CollisionType.TopCollision:
-                    if (currentMario.MarioSprite.FallSpeed >= 0f)
+                    if (currentMario.PlayerSprite.fallSpeed >= 0f)
                     {
-                        if (currentMario.MyState == 1 && currentMario.MarioSprite.IsMoving == false && currentMario.MarioSprite.IsJumping)
+                        if (currentMario.MyState == 1 && currentMario.PlayerSprite.isMoving == false && currentMario.PlayerSprite.isJumping)
                         {
-                            currentMario.State = new SmallIdleMarioState(currentMario);
-                            currentMario.MarioSprite = new MarioSpriteSmallIdle(currentMario.MarioSprite);
+                            currentMario.State = new PlayerStateSmallIdle(currentMario);
+                            currentMario.PlayerSprite = new PlayerSpriteSmallIdle(currentMario.PlayerSprite);
                         }
-                        else if (currentMario.MyState == 1 && currentMario.MarioSprite.IsJumping)
+                        else if (currentMario.MyState == 1 && currentMario.PlayerSprite.isJumping)
                         {
-                            currentMario.State = new SmallRunningMarioState(currentMario);
-                            currentMario.MarioSprite = new MarioSpriteSmallRunning(currentMario.MarioSprite);
+                            currentMario.State = new PlayerStateSmallRunning(currentMario);
+                            currentMario.PlayerSprite = new PlayerSpriteSmallRunning(currentMario.PlayerSprite);
                         }
-                        if (currentMario.MyState == 2 && currentMario.MarioSprite.IsMoving == false && currentMario.MarioSprite.IsJumping)
+                        if (currentMario.MyState == 2 && currentMario.PlayerSprite.isMoving == false && currentMario.PlayerSprite.isJumping)
                         {
                             currentMario.State = new BigIdleMarioState(currentMario);
-                            currentMario.MarioSprite = new MarioSpriteBigIdle(currentMario.MarioSprite);
+                            currentMario.PlayerSprite = new PlayerSpriteBigIdle(currentMario.PlayerSprite);
                         }
-                        else if (currentMario.MyState == 2 && currentMario.MarioSprite.IsJumping)
+                        else if (currentMario.MyState == 2 && currentMario.PlayerSprite.isJumping)
                         {
                             currentMario.State = new BigRunningMarioState(currentMario);
-                            currentMario.MarioSprite = new MarioSpriteBigRunning(currentMario.MarioSprite);
+                            currentMario.PlayerSprite = new PlayerSpriteBigRunning(currentMario.PlayerSprite);
                         }
-                        if (currentMario.MyState == 3 && currentMario.MarioSprite.IsMoving == false && currentMario.MarioSprite.IsJumping)
+                        if (currentMario.MyState == 3 && currentMario.PlayerSprite.isMoving == false && currentMario.PlayerSprite.isJumping)
                         {
                             currentMario.State = new FireIdleMarioState(currentMario);
-                            currentMario.MarioSprite = new MarioSpriteFireIdle(currentMario.MarioSprite);
+                            currentMario.PlayerSprite = new PlayerSpriteFireIdle(currentMario.PlayerSprite);
                         }
-                        else if (currentMario.MyState == 3 && currentMario.MarioSprite.IsJumping)
+                        else if (currentMario.MyState == 3 && currentMario.PlayerSprite.isJumping)
                         {
-                            currentMario.State = new FireRunningMarioState(currentMario);
-                            currentMario.MarioSprite = new MarioSpriteFireRunning(currentMario.MarioSprite);
+                            currentMario.State = new PlayerStateDemoRunning(currentMario);
+                            currentMario.PlayerSprite = new PlayerSpriteFireRunning(currentMario.PlayerSprite);
                         }
-                        currentMario.MarioSprite.FallSpeed = 0f;
-                        currentMario.MoveTo((int)currentMario.MarioSprite.SpritePosition.X, pausedMario.MarioSprite.DestRectangle.Top - currentMario.MarioSprite.DestRectangle.Height + 1);
+                        currentMario.PlayerSprite.fallSpeed = 0f;
+                        currentMario.MoveTo((int)currentMario.PlayerSprite.spritePosition.X, pausedMario.PlayerSprite.destRectangle.Top - currentMario.PlayerSprite.destRectangle.Height + 1);
                     }
                     break;
                 case CollisionDetection.CollisionType.BottomCollision:
-                    if (currentMario.MarioSprite.FallSpeed < 0f && currentMario.MyState != 0)
+                    if (currentMario.PlayerSprite.fallSpeed < 0f && currentMario.MyState != 0)
                     {
-                        currentMario.MoveTo((int)currentMario.MarioSprite.SpritePosition.X, pausedMario.MarioSprite.DestRectangle.Bottom + 1);
-                        currentMario.MarioSprite.FallSpeed = 0f;
+                        currentMario.MoveTo((int)currentMario.PlayerSprite.spritePosition.X, pausedMario.PlayerSprite.destRectangle.Bottom + 1);
+                        currentMario.PlayerSprite.fallSpeed = 0f;
                     }
                     break;
                 case CollisionDetection.CollisionType.LeftCollision:
                     if (currentMario.MyState != 0)
-                        currentMario.MoveTo(pausedMario.MarioSprite.DestRectangle.Right + 1, (int)currentMario.MarioSprite.SpritePosition.Y);
+                        currentMario.MoveTo(pausedMario.PlayerSprite.destRectangle.Right + 1, (int)currentMario.PlayerSprite.spritePosition.Y);
                     break;
                 case CollisionDetection.CollisionType.RightCollision:
                     if (currentMario.MyState != 0)
-                        currentMario.MoveTo(pausedMario.MarioSprite.DestRectangle.Left - currentMario.MarioSprite.DestRectangle.Width - 1, (int)currentMario.MarioSprite.SpritePosition.Y);
+                        currentMario.MoveTo(pausedMario.PlayerSprite.destRectangle.Left - currentMario.PlayerSprite.destRectangle.Width - 1, (int)currentMario.PlayerSprite.spritePosition.Y);
                     break;
                 default:
                     break;
@@ -406,11 +407,11 @@ namespace JOL
         }
 
         // Take care of the collisions between Mario and portals
-        private static void HandlePortalCollisions(Mario mario, List<Portal> portals)
+        private static void HandlePortalCollisions(Player mario, List<Portal> portals)
         {
             foreach (Portal p in portals)
             {
-                CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.MarioSprite.DestRectangle, p.DestRectangle);
+                CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.PlayerSprite.destRectangle, p.DestRectangle);
                 switch (collision)
                 {
                     case CollisionDetection.CollisionType.NoCollision:
@@ -423,9 +424,9 @@ namespace JOL
         }
 
         // Take care of the collisions between Mario and flag poles
-        private static void HandleFlagPoleCollisions(Mario mario, FlagPole flagPole)
+        private static void HandleFlagPoleCollisions(Player mario, FlagPole flagPole)
         {
-            CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.MarioSprite.DestRectangle, flagPole.CollisionRectangle);
+            CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.PlayerSprite.destRectangle, flagPole.CollisionRectangle);
             switch (collision)
             {
                 case CollisionDetection.CollisionType.NoCollision:
@@ -437,12 +438,12 @@ namespace JOL
         }
 
         // Take care of the collisions between Mario and kill zones
-        private static void HandleMarioKillZoneCollisions(Mario mario, List<KillZone> killZones)
+        private static void HandleMarioKillZoneCollisions(Player mario, List<KillZone> killZones)
         {
             foreach (KillZone kz in killZones)
             {
                 bool isDead = false;
-                CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.MarioSprite.DestRectangle, kz.DestRectangle);
+                CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.PlayerSprite.destRectangle, kz.DestRectangle);
                 switch (collision)
                 {
                     case CollisionDetection.CollisionType.NoCollision:

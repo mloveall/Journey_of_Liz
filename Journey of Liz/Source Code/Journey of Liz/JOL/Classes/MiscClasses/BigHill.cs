@@ -12,7 +12,7 @@ namespace JOL.Classes.BlockClasses
     {
         public Texture2D texture;
         public Rectangle DestRectangle { get; set; }
-        private int height = 72, width = 168;
+        private int height = 256, width = 128;
 
         public BigHill(Texture2D texture, Vector2 location)
         {
@@ -22,9 +22,9 @@ namespace JOL.Classes.BlockClasses
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), width, height);
+            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), width, height);
 
-            spriteBatch.Draw(texture, destRectangle, Color.White);
+            spriteBatch.Draw(texture, relativeDestRectangle, Color.White);
         }
     }
 }

@@ -7,8 +7,8 @@ namespace JOL.Commands
 {
     public class CharacterSwitchCommand : ICommand
     {
-        Mario mario, luigi;
-        public CharacterSwitchCommand(Mario mario, Mario luigi)
+        Player mario, luigi;
+        public CharacterSwitchCommand(Player mario, Player luigi)
         {
             this.mario = mario;
             this.luigi = luigi;

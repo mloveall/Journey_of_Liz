@@ -67,20 +67,20 @@ namespace JOL.Classes.BlockClasses
         // "SpriteBatch" will be the spritebatch used for this animation, "location" is where we want it drawn
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
+            Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
             Rectangle sourceRectangle = new Rectangle(width*currentFrame,0, width,height);
             if (isAlive)
-                spriteBatch.Draw(texture, destRectangle, sourceRectangle, Color.White);
+                spriteBatch.Draw(texture, relativeDestRectangle, sourceRectangle, Color.White);
             else
-                spriteBatch.Draw(dead, destRectangle, Color.White);
+                spriteBatch.Draw(dead, relativeDestRectangle, Color.White);
         }
 
-        public void Bump(Mario mario)
+        public void Bump(Player mario)
         {
             if (isAlive)
             {
                 int x = outPortal.DestRectangle.X;
-                int y = outPortal.DestRectangle.Y + mario.MarioSprite.DestRectangle.Height;
+                int y = outPortal.DestRectangle.Y + mario.PlayerSprite.destRectangle.Height;
                 mario.MoveTo(x, y);
             }
             outPortal.isAlive = true;

@@ -7,9 +7,9 @@ namespace JOL.Commands
 {
     class BigStateCommand : ICommand
     {
-          Mario mario;
+          Player mario;
 
-          public BigStateCommand(Mario mario)
+          public BigStateCommand(Player mario)
         {
             this.mario = mario;
         }

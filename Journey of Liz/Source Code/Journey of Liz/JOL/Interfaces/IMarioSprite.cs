@@ -16,24 +16,23 @@ namespace JOL.Interfaces
     /// An abstract base class for various Mario sprites.
     /// </summary>
 
-    public interface IMarioSprite
+    public interface IPlayerSprite
     {
-        Texture2D Sprite { get; set; }
-        Vector2 SpritePosition { get; set; }
-        Rectangle DestRectangle { get; set; }
-        Rectangle BotRectangle { get; set; }
-        bool FacingRight { get; set; }
-        bool IsMoving { get; set; }
-        bool IsJumping { get; set; }
-        float FallSpeed { get; set; }
-        float StarTimer { get; set; }
-        ContentManager ContentManager { get; set; }
+        Texture2D sprite { get; set; }
+        Vector2 spritePosition { get; set; }
+        Rectangle destRectangle { get; set; }
+        Rectangle botRectangle { get; set; }
+        bool isFacingRight { get; set; }
+        bool isMoving { get; set; }
+        bool isJumping { get; set; }
+        float fallSpeed { get; set; }
+        float starTimer { get; set; }
+        ContentManager contentManager { get; set; }
         void Update(GameTime gameTime);
         void Draw(SpriteBatch spriteBatch, ICamera camera);
         void MoveTo(int xPosition, int yPosition);
-        float Velocity { get; set; }
-        float Gravity { get; set; }
-        Color Tint { get; set; }
-        SoundEffectInstance SoundInstance { get; set; }
+        float velocity { get; set; }
+        Color tint { get; set; }
+        SoundEffectInstance soundInstance { get; set; }
     }
 }

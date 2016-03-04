@@ -18,9 +18,9 @@ namespace JOL
     public class Level
     {
         // Global variables
-        public Mario mario;
-        public Mario luigi;
-        public MultiMarioHolder marios;
+        public Player mario;
+        public Player luigi;
+        public MultiPlayerHolder marios;
         public int lives = 3, score = 0, coins = 0;
         public bool dyingAnimation;
 
@@ -36,6 +36,7 @@ namespace JOL
         InstructionOne instructionOne;
         InstructionTwo instructionTwo;
         List<BigHill> bigHills;
+        List<Cloud> clouds;
         HeadsUpDisplay hud;
         IController keyboardController;
         ICamera camera;
@@ -43,17 +44,18 @@ namespace JOL
         bool isPaused;
 
         // Constructor
-        public Level(Mario mario, Mario luigi, List<IItem> items, List<IBlock> blocks, List<IEnemy> enemies, List<KillZone> killZones, FlagPole flagPole, InstructionOne instructionOne, InstructionTwo instructionTwo, List<BigHill> bigHills, List<Portal> portals, Game1 game, ICamera camera, HeadsUpDisplay hud)
+        public Level(Player mario, Player luigi, List<IItem> items, List<IBlock> blocks, List<IEnemy> enemies, List<KillZone> killZones, FlagPole flagPole, InstructionOne instructionOne, InstructionTwo instructionTwo, List<BigHill> bigHills, List<Cloud> clouds, List<Portal> portals, Game1 game, ICamera camera, HeadsUpDisplay hud)
         {
             this.mario = mario;
             this.luigi = luigi;
-            this.marios = new MultiMarioHolder(mario, luigi);
+            this.marios = new MultiPlayerHolder(mario, luigi);
             this.items = items;
             this.blocks = blocks;
             this.enemies = enemies;
             this.killZones = killZones;
             this.flagPole = flagPole;
             this.bigHills = bigHills;
+            this.clouds = clouds;
             this.instructionOne = instructionOne;
             this.instructionTwo = instructionTwo;
             this.portals = portals;
@@ -137,6 +139,10 @@ namespace JOL
             for (int i = 0; i < bigHills.Count; i++)
             {
                 bigHills[i].Draw(spriteBatch, camera);
+            }
+            for (int i = 0; i < clouds.Count; i++)
+            {
+                clouds[i].Draw(spriteBatch, camera);
             }
             for (int i = 0; i < items.Count; i++)
             {

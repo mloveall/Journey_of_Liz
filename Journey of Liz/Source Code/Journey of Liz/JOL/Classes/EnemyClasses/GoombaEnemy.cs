@@ -89,17 +89,17 @@ namespace JOL
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
+            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
             if (toDraw)
             {
                     Rectangle sourceRectangle = new Rectangle(xPosSource + currentFrame * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
                     if (facingRight)
                     {
-                        spriteBatch.Draw(sprite, destRectangle, sourceRectangle, Color.White);
+                        spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
                     }
                     else
                     {
-                        spriteBatch.Draw(sprite, destRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 1);
+                        spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 1);
                     }
             }
         }

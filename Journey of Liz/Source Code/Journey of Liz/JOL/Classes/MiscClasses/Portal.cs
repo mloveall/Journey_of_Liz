@@ -43,20 +43,20 @@ namespace JOL.Classes.MiscClasses
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), width, height);
+            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), width, height);
 
             if (facingLeft)
             {
-                spriteBatch.Draw(texture, destRectangle, null, Color.White);
+                spriteBatch.Draw(texture, relativeDestRectangle, null, Color.White);
             }
             else
             {
-                spriteBatch.Draw(texture, destRectangle, null, Color.White,0f,new Vector2(),SpriteEffects.FlipHorizontally,0.5f);
+                spriteBatch.Draw(texture, relativeDestRectangle, null, Color.White,0f,new Vector2(),SpriteEffects.FlipHorizontally,0.5f);
             }
 
         }
 
-        public void Warp(Mario mario)
+        public void Warp(Player mario)
         {
             if (!recentlyUsed)
             {
@@ -64,18 +64,18 @@ namespace JOL.Classes.MiscClasses
 
                 if (outPortal.facingLeft)
                 {
-                    x = outPortal.DestRectangle.X - mario.MarioSprite.DestRectangle.Width - outPortal.DestRectangle.Width;
+                    x = outPortal.DestRectangle.X - mario.PlayerSprite.destRectangle.Width - outPortal.DestRectangle.Width;
                 }
                 else
                 {
                     x = outPortal.DestRectangle.X + outPortal.DestRectangle.Width;
                 }
 
-                y = outPortal.DestRectangle.Y + (mario.MarioSprite.DestRectangle.Y - this.DestRectangle.Y);
+                y = outPortal.DestRectangle.Y + (mario.PlayerSprite.destRectangle.Y - this.DestRectangle.Y);
 
                 if (this.facingLeft == outPortal.facingLeft)
                 {
-                    mario.MarioSprite.FacingRight = !mario.MarioSprite.FacingRight;
+                    mario.PlayerSprite.isFacingRight = !mario.PlayerSprite.isFacingRight;
                 }
                 mario.MoveTo(x, y);
                 this.recentlyUsed = true;

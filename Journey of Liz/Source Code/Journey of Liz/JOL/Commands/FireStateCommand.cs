@@ -7,9 +7,9 @@ namespace JOL
 {
     class FireStateCommand : ICommand
     {
-        Mario mario;
+        Player mario;
 
-        public FireStateCommand(Mario mario)
+        public FireStateCommand(Player mario)
         {
             this.mario = mario;
         }

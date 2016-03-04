@@ -26,9 +26,9 @@ namespace JOL.Classes.MiscClasses
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), width, height);
+            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), width, height);
 
-            spriteBatch.Draw(texture, destRectangle, Color.White);
+            spriteBatch.Draw(texture, relativeDestRectangle, Color.White);
         }
     }
 }

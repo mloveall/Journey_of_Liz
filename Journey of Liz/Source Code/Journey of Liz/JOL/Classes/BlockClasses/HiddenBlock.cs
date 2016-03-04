@@ -51,15 +51,15 @@ namespace JOL.Classes.BlockClasses
         // Don't draw anything until it is being bumbed.
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
+            Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
             if(isHidden)
-                spriteBatch.Draw(hiddenTexture, destRectangle, Color.White);
+                spriteBatch.Draw(hiddenTexture, relativeDestRectangle, Color.White);
             else
-                spriteBatch.Draw(exposedTexture, destRectangle, Color.White);
+                spriteBatch.Draw(exposedTexture, relativeDestRectangle, Color.White);
         }
 
         // Bump is called when Mario hits the bottom of the block
-        public void Bump(Mario mario)
+        public void Bump(Player mario)
         {
             bool isSmallMario = false;
             if (mario.MyState == 1)

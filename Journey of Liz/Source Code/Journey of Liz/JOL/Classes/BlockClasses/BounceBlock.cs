@@ -44,12 +44,12 @@ namespace JOL.Classes.BlockClasses
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
+            Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
 
-            spriteBatch.Draw(Texture, destRectangle, Color.White);
+            spriteBatch.Draw(Texture, relativeDestRectangle, Color.White);
         }
 
-        public void Bump(Mario mario)
+        public void Bump(Player mario)
         {
            
         }

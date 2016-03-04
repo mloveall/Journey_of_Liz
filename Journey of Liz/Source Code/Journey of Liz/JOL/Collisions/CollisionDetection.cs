@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using JOL.Interfaces;
-using JOL.MarioStates;
+using JOL.PlayerStates;
 using Microsoft.Xna.Framework;
 
 namespace JOL

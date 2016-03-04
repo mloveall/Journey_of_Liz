@@ -41,8 +41,9 @@
     <ProductName>Journey of Liz</ProductName>
     <PublisherName>Mitchell Loveall</PublisherName>
     <OpenBrowserOnPublish>false</OpenBrowserOnPublish>
-    <ApplicationRevision>7</ApplicationRevision>
-    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <AutorunEnabled>true</AutorunEnabled>
+    <ApplicationRevision>2</ApplicationRevision>
+    <ApplicationVersion>0.3.1.%2a</ApplicationVersion>
     <UseApplicationTrust>false</UseApplicationTrust>
     <PublishWizardCompleted>true</PublishWizardCompleted>
     <BootstrapperEnabled>true</BootstrapperEnabled>
@@ -140,13 +141,17 @@
   <ItemGroup>
     <Compile Include="Classes\BlockClasses\BluePortalBlock.cs" />
     <Compile Include="Classes\BlockClasses\BounceBlock.cs" />
+    <Compile Include="Classes\BlockClasses\SandBlock.cs" />
+    <Compile Include="Classes\BlockClasses\GrassBlock.cs" />
     <Compile Include="Classes\MiscClasses\BigHill.cs" />
+    <Compile Include="Classes\MiscClasses\Cloud.cs" />
     <Compile Include="Classes\MiscClasses\InstructionTwo.cs" />
     <Compile Include="Classes\MiscClasses\InstructionOne.cs" />
     <Compile Include="Classes\MiscClasses\FlagPole.cs" />
     <Compile Include="Classes\MiscClasses\KillZone.cs" />
     <Compile Include="Classes\BlockClasses\OrangePortalBlock.cs" />
     <Compile Include="Classes\MiscClasses\Portal.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSprite.cs" />
     <Compile Include="Commands\CharacterSwitchCommand.cs" />
     <Compile Include="GUIs\WinScreen.cs" />
     <Compile Include="Cameras\FollowCharacterCamera.cs" />
@@ -157,19 +162,19 @@
     <Compile Include="Classes\ItemContainerClasses\SingleItemContainer.cs" />
     <Compile Include="Classes\ItemClasses\StarItem.cs" />
     <Compile Include="Classes\ItemContainerClasses\VariableItemContainer.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteBigCrouch.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteBigIdle.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteBigJumping.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteBigRunning.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteDead.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteFireCrouch.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteFireIdle.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteFireJumping.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteFireRunning.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteSmallCrouch.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteSmallIdle.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteSmallJumping.cs" />
-    <Compile Include="Classes\MarioClasses\MarioSpriteSmallRunning.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteBigCrouch.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteBigIdle.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteBigJumping.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteBigRunning.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteDead.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteFireCrouch.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteFireIdle.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteFireJumping.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteFireRunning.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteSmallCrouch.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteSmallIdle.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteSmallJumping.cs" />
+    <Compile Include="Classes\PlayerClasses\PlayerSpriteSmallRunning.cs" />
     <Compile Include="Collisions\CollisionDetection.cs" />
     <Compile Include="Collisions\CollisionHandler.cs" />
     <Compile Include="Commands\PauseCommand.cs" />
@@ -199,35 +204,36 @@
     <Compile Include="Interfaces\IController.cs" />
     <Compile Include="Interfaces\IEnemy.cs" />
     <Compile Include="Interfaces\IItem.cs" />
-    <Compile Include="Interfaces\IMarioState.cs" />
+    <Compile Include="Interfaces\IPlayerState.cs" />
     <Compile Include="Controllers\KeyboardController.cs" />
     <Compile Include="Classes\EnemyClasses\KoopaEnemy.cs" />
     <Compile Include="Level Builders\Level.cs" />
     <Compile Include="Level Builders\LevelBuilder.cs" />
-    <Compile Include="Mario States\BigCrouchMarioState.cs" />
-    <Compile Include="Mario States\BigIdleMarioState.cs" />
-    <Compile Include="Mario States\BigJumpingMarioState.cs" />
-    <Compile Include="Mario States\BigRunningMarioState.cs" />
-    <Compile Include="Mario States\CollectBlinkingMarioState.cs" />
-    <Compile Include="Mario States\DeadMarioState.cs" />
-    <Compile Include="Mario States\FireCrouchMarioState.cs" />
-    <Compile Include="Mario States\FireIdleMarioState.cs" />
-    <Compile Include="Mario States\FireJumpingMarioState.cs" />
-    <Compile Include="Mario States\FireRunningMarioState.cs" />
-    <Compile Include="Mario States\SmallCrouchMarioState.cs" />
-    <Compile Include="Mario States\SmallJumpingMarioState.cs" />
-    <Compile Include="Classes\MarioClasses\TransitionSprite.cs" />
-    <Compile Include="Mario\Mario.cs" />
-    <Compile Include="Mario\MarioSpriteFactory.cs" />
+    <Compile Include="PlayerStates\PlayerStateBigCrouch.cs" />
+    <Compile Include="PlayerStates\PlayerStateBigIdle.cs" />
+    <Compile Include="PlayerStates\PlayerStateBigJumping.cs" />
+    <Compile Include="PlayerStates\PlayerStateBigRunning.cs" />
+    <Compile Include="PlayerStates\PlayerStateCollectBlinking.cs" />
+    <Compile Include="PlayerStates\PlayerStateDead.cs" />
+    <Compile Include="PlayerStates\PlayerStateDemoCrouch.cs" />
+    <Compile Include="PlayerStates\PlayerStateDemoIdle.cs" />
+    <Compile Include="PlayerStates\PlayerStateDemoJumping.cs" />
+    <Compile Include="PlayerStates\PlayerStateDemoRunning.cs" />
+    <Compile Include="PlayerStates\PlayerState.cs" />
+    <Compile Include="PlayerStates\PlayerStateSmallCrouch.cs" />
+    <Compile Include="PlayerStates\PlayerStateSmallJumping.cs" />
+    <Compile Include="Classes\PlayerClasses\TransitionSprite.cs" />
+    <Compile Include="Player\Player.cs" />
+    <Compile Include="Player\PlayerSpriteFactory.cs" />
     <Compile Include="Classes\ItemClasses\MushroomItem.cs" />
-    <Compile Include="Mario\MultiMarioHolder.cs" />
+    <Compile Include="Player\MultiPlayerHolder.cs" />
     <Compile Include="GUIs\PauseMenu.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="Commands\QuitCommand.cs" />
-    <Compile Include="Mario States\SmallIdleMarioState.cs" />
-    <Compile Include="Mario States\SmallRunningMarioState.cs" />
+    <Compile Include="PlayerStates\PlayerStateSmallIdle.cs" />
+    <Compile Include="PlayerStates\PlayerStateSmallRunning.cs" />
     <Compile Include="Classes\BlockClasses\QuestionBlock.cs" />
     <Compile Include="Classes\BlockClasses\StairBlock.cs" />
     <Compile Include="Classes\BlockClasses\UsedBlock.cs" />

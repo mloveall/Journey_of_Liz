@@ -82,10 +82,10 @@ namespace JOL
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
+            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
             if (isActive || isSpawning)
             {
-                spriteBatch.Draw(sprite, destRectangle, Color.White);
+                spriteBatch.Draw(sprite, relativeDestRectangle, Color.White);
             }
         }
 

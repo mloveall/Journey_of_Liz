@@ -7,9 +7,9 @@ namespace JOL.Commands
 {
     class ToggleJumpIdleCrouchCommand : ICommand
     {
-        MultiMarioHolder holder;
+        MultiPlayerHolder holder;
 
-        public ToggleJumpIdleCrouchCommand(MultiMarioHolder holder)
+        public ToggleJumpIdleCrouchCommand(MultiPlayerHolder holder)
         {
             this.holder = holder;
         }

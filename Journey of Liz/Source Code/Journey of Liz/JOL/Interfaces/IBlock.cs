@@ -17,6 +17,6 @@ namespace JOL.Interfaces
         void Update(GameTime gameTime);
         void Reset();
         void Draw(SpriteBatch spriteBatch, ICamera camera);
-        void Bump(Mario mario);
+        void Bump(Player mario);
     }
 }

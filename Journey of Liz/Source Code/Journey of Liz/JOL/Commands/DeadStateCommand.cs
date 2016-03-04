@@ -7,9 +7,9 @@ namespace JOL
 {
     class DeadStateCommand : ICommand
     {
-        Mario mario;
+        Player mario;
 
-        public DeadStateCommand(Mario mario)
+        public DeadStateCommand(Player mario)
         {
             this.mario = mario;
         }

@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using JOL.Classes.BlockClasses;
 using JOL.Interfaces;
-using JOL.Classes.MarioClasses;
+using JOL.PlayerStates;
+using JOL.Classes.BlockClasses;
+using JOL.Classes.PlayerClasses;
 using Microsoft.Xna.Framework;
 
 namespace JOL.Commands
 {
     class ResetCommand : ICommand
     {
-        Mario mario;
-        Mario luigi;
+        Player mario;
+        Player luigi;
         List<IBlock> blocks;
         List<IItem> items;
 
-        public ResetCommand(Mario mario, Mario luigi, List<IBlock> blocks, List<IItem> items)
+        public ResetCommand(Player mario, Player luigi, List<IBlock> blocks, List<IItem> items)
         {
             this.mario = mario;
             this.luigi = luigi;
@@ -36,16 +37,16 @@ namespace JOL.Commands
                 items[i].Reset();
             }
 
-            Vector2 tempPos = mario.MarioSprite.SpritePosition;
+            Vector2 tempPos = mario.PlayerSprite.spritePosition;
             tempPos.X = 448;
             tempPos.Y = 352;
-            mario.MarioSprite.SpritePosition = tempPos;
-            mario.State = new SmallIdleMarioState(mario);
-            mario.MarioSprite = new MarioSpriteSmallIdle(mario.MarioSprite);
-            mario.MarioSprite.FacingRight = true;
-            mario.MarioSprite.StarTimer = 0;
+            mario.PlayerSprite.spritePosition = tempPos;
+            mario.State = new PlayerStateSmallIdle(mario);
+            mario.PlayerSprite = new PlayerSpriteSmallIdle(mario.PlayerSprite);
+            mario.PlayerSprite.isFacingRight = true;
+            mario.PlayerSprite.starTimer = 0;
             mario.MyState = 1;
-            mario.MarioSprite.FallSpeed = 0f;
+            mario.PlayerSprite.fallSpeed = 0f;
             mario.MediaManager(1);
         }
     }

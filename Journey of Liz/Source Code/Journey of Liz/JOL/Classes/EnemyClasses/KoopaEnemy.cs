@@ -153,7 +153,7 @@ namespace JOL
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle destRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
+            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
             Rectangle sourceRectangle;
 
             switch (currentState)
@@ -166,11 +166,11 @@ namespace JOL
                     sourceRectangle = new Rectangle(xPosSource + currentFrame * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
                     if (facingRight)
                     {
-                        spriteBatch.Draw(sprite, destRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 1);
+                        spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 1);
                     }
                     else
                     {
-                        spriteBatch.Draw(sprite, destRectangle, sourceRectangle, Color.White);
+                        spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
                     }
 
                     break;
@@ -178,20 +178,20 @@ namespace JOL
                 case KoopaState.stoppedShell:
 
                     sourceRectangle = new Rectangle(xPosSource + SHELL_FRAME * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
-                    spriteBatch.Draw(sprite, destRectangle, sourceRectangle, Color.White);
+                    spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
 
                     break;
 
                 case KoopaState.movingShell:
 
                     sourceRectangle = new Rectangle(xPosSource + SHELL_FRAME * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
-                    spriteBatch.Draw(sprite, destRectangle, sourceRectangle, Color.White);
+                    spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
 
                     break;
 
                 case KoopaState.transition:
                     sourceRectangle = new Rectangle(xPosSource + TRANSITION_FRAME * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
-                    spriteBatch.Draw(sprite, destRectangle, sourceRectangle, Color.White);
+                    spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
 
                     break;
                 case KoopaState.dead:
