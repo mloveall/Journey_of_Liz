@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using JOL.Interfaces;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
-using JOL.Interfaces;
 using Microsoft.Xna.Framework.Audio;
 
 namespace JOL.Classes.PlayerClasses
 {
-    class PlayerSpriteSmallJumping : PlayerSprite
+    class PlayerSpriteRidingJumping : PlayerSprite
     {
         SoundEffect sound;
 
-        public PlayerSpriteSmallJumping(IPlayerSprite previousSprite) : base(previousSprite)
+        public PlayerSpriteRidingJumping(IPlayerSprite previousSprite) : base(previousSprite)
         {
-            spriteWidth = 24;
-            spriteHeight = 32;
-            sprite = contentManager.Load<Texture2D>("Liz/liz_jump");
+            spriteWidth = 32;
+            spriteHeight = 64;
+            sprite = contentManager.Load<Texture2D>("Liz/liz_riding_jump");
             isMoving = previousSprite.isMoving;
             isJumping = true;
             fallSpeed = -7.4f;
@@ -28,18 +28,6 @@ namespace JOL.Classes.PlayerClasses
             Initialize(previousSprite);
         }
 
-        public PlayerSpriteSmallJumping(ContentManager content) : base(content)
-        {
-            contentManager = content;
-            spriteWidth = 24;
-            spriteHeight = 32;
-            sprite = contentManager.Load<Texture2D>("Liz/liz_jump");
-            spritePosition = new Vector2(390,300);
-
-            Initialize();
-        }
-
-
         public override void Update(GameTime gameTime)
         {
             if (isJumping)
@@ -47,8 +35,7 @@ namespace JOL.Classes.PlayerClasses
                 Vector2 tempPos = spritePosition;
                 tempPos.Y += fallSpeed;
                 spritePosition = tempPos;
-                if (fallSpeed < 10f)
-                    fallSpeed += GRAVITY;
+                fallSpeed += GRAVITY;
             }
 
             if (isFacingRight == true && isMoving)
@@ -65,7 +52,6 @@ namespace JOL.Classes.PlayerClasses
             }
 
             destRectangle = new Rectangle((int)spritePosition.X, (int)spritePosition.Y, spriteWidth, spriteHeight);
-
         }
     }
 }

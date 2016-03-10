@@ -13,7 +13,7 @@ using JOL.Interfaces;
 
 namespace JOL
 {
-    public class DeadMushroomItem : IItem
+    public class BardieEggItem : IItem
     {
         public bool toDelete { get; set; }
         public bool isActive { get; set; }
@@ -26,16 +26,18 @@ namespace JOL
 
         int xPosDest = 300, yPosDest = 100;
 
+        SoundEffect sound;
+        SoundEffectInstance soundInstance;
+       
         int magnifier = 2, spawnHeight;
         private static int HEIGHT = 16, WIDTH = 16, MUSHROOM_SPEED = 2;
 
-        
-        public DeadMushroomItem()
+        public BardieEggItem()
         {
-
+            
         }
 
-        public DeadMushroomItem(Texture2D sprite, int xPos, int yPos, bool isActive)
+        public BardieEggItem(Texture2D sprite, int xPos, int yPos, bool isActive)
         {
             this.sprite = sprite;
             xPosDest = xPos;
@@ -43,6 +45,18 @@ namespace JOL
             DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
             toDelete = false;
             this.isActive = isActive;
+        }
+
+        public BardieEggItem(Texture2D sprite, int xPos, int yPos, bool isActive, SoundEffect sound)
+        {
+            this.sprite = sprite;
+            xPosDest = xPos;
+            yPosDest = yPos;
+            DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
+            toDelete = false;
+            this.isActive = isActive;
+            this.sound = sound;
+            soundInstance = sound.CreateInstance();
         }
 
         public void Update(GameTime gameTime)
@@ -62,24 +76,23 @@ namespace JOL
             }
             if (isActive)
             {
-                if (facingRight)
-                {
-                    xPosDest += MUSHROOM_SPEED;
-                }
-                else
-                {
-                    xPosDest -= MUSHROOM_SPEED;
-                }
-                yPosDest += (int)FallSpeed;
-                if (FallSpeed.CompareTo(10.0f) < 0)
-                {
-                    FallSpeed = FallSpeed * 1.05f;
-                }
-
+                    if (facingRight)
+                    {
+                        xPosDest += MUSHROOM_SPEED;
+                    }
+                    else
+                    {
+                        xPosDest -= MUSHROOM_SPEED;
+                    }
+                    yPosDest += (int)FallSpeed;
+                    if (FallSpeed.CompareTo(10.0f) < 0)
+                    {
+                        FallSpeed = FallSpeed * 1.05f;
+                    }
+                
             }
             DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
         }
-
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
             Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
@@ -103,6 +116,7 @@ namespace JOL
         public void Spawn()
         {
             isSpawning = true;
+            soundInstance.Play();
         }
 
         public void Flip()

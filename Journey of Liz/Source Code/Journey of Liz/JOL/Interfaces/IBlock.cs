@@ -13,7 +13,7 @@ namespace JOL.Interfaces
 
     public interface IBlock : IDeletable
     {
-        Rectangle DestRectangle { get; set; }
+        Rectangle destRectangle { get; set; }
         void Update(GameTime gameTime);
         void Reset();
         void Draw(SpriteBatch spriteBatch, ICamera camera);

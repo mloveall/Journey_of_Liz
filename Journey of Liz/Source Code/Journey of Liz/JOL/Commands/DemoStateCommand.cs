@@ -5,18 +5,18 @@ using System.Text;
 
 namespace JOL
 {
-    class FireStateCommand : ICommand
+    class DemoStateCommand : ICommand
     {
-        Player mario;
+        Player player;
 
-        public FireStateCommand(Player mario)
+        public DemoStateCommand(Player player)
         {
-            this.mario = mario;
+            this.player = player;
         }
 
         public void Execute()
         {
-            mario.Collect(new FireFlowerItem());
+            player.Collect(new CheatPotionItem());
         }
 
     }

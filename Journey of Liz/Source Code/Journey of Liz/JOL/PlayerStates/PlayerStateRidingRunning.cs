@@ -9,19 +9,20 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using JOL.PlayerStates;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.ItemClasses;
 using JOL.Interfaces;
 
-namespace JOL.PlayerStates
+namespace JOL
 {
     /// <summary>
-    /// Running state of the small player.
+    /// Running state of the riding player.
     /// </summary>
 
-    class PlayerStateSmallRunning : PlayerState
+    class PlayerStateRidingRunning : PlayerState
     {
-        public PlayerStateSmallRunning(Player player) : base(player)
+        public PlayerStateRidingRunning(Player player) : base(player)
         {
             
         }
@@ -30,8 +31,8 @@ namespace JOL.PlayerStates
         {
             if (player.playerSprite.isFacingRight == true)
             {
-                player.playerState = new PlayerStateSmallIdle(player);
-                player.playerSprite = new PlayerSpriteSmallIdle(player.playerSprite);
+                player.playerState = new PlayerStateRidingIdle(player);
+                player.playerSprite = new PlayerSpriteRidingIdle(player.playerSprite);
             }
             else
             {
@@ -43,8 +44,8 @@ namespace JOL.PlayerStates
         {
             if (player.playerSprite.isFacingRight == false)
             {
-                player.playerState = new PlayerStateSmallIdle(player);
-                player.playerSprite = new PlayerSpriteSmallIdle(player.playerSprite);
+                player.playerState = new PlayerStateRidingIdle(player);
+                player.playerSprite = new PlayerSpriteRidingIdle(player.playerSprite);
             }
             else
             {
@@ -54,19 +55,22 @@ namespace JOL.PlayerStates
 
         public override void Up()
         {
-            player.playerState = new PlayerStateSmallJumping(player);
-            player.playerSprite = new PlayerSpriteSmallJumping(player.playerSprite);
+            player.playerState = new PlayerStateRidingJumping(player);
+            player.playerSprite = new PlayerSpriteRidingJumping(player.playerSprite);
             player.playerSprite.soundInstance.Play();
+        }
+
+        public override void Down()
+        {
+            player.playerState = new PlayerStateRidingCrouch(player);
+            player.playerSprite = new PlayerSpriteRidingCrouch(player.playerSprite);
         }
 
         public override void Hit()
         {
-            player.playerState = new PlayerStateDead(player);
-            player.playerSprite = new PlayerSpriteDead(player.playerSprite);
-            player.myState = 0;
-            player.level.lives--;
-            player.level.dyingAnimation = true;
-            player.MediaManager(2);
+            player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateSmallRunning(player));
+            player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteSmallRunning(player.playerSprite), -1);
+            player.myState = 1;
             player.playerSprite.soundInstance.Play();
         }
 
@@ -74,23 +78,21 @@ namespace JOL.PlayerStates
         {
             if (item is CheatPotionItem)
             {
-                player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateDemoRunning(player));
+                player.playerState = new PlayerStateCollectBlinking(player,new PlayerStateDemoRunning(player));
                 player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteDemoRunning(player.playerSprite), 1);
                 player.myState = 3;
                 player.playerSprite.soundInstance.Play();
             }
             else if (item is BardieEggItem)
             {
-                player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateRidingRunning(player));
-                player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteRidingRunning(player.playerSprite), 1);
-                player.myState = 2;
-                player.playerSprite.soundInstance.Play();
+                // Do nothing since already in riding state.
             }
             else if (item is DeathPotionItem)
             {
                 player.playerState = new PlayerStateDead(player);
                 player.playerSprite = new PlayerSpriteDead(player.playerSprite);
             }
+            
         }
 
         public override void Update(GameTime gameTime)
@@ -98,13 +100,13 @@ namespace JOL.PlayerStates
             player.playerSprite.Update(gameTime);
             if (player.playerSprite.velocity <= 0.0f)
             {
-                player.playerState = new PlayerStateSmallIdle(player);
-                player.playerSprite = new PlayerSpriteSmallIdle(player.playerSprite);
+                player.playerState = new PlayerStateRidingIdle(player);
+                player.playerSprite = new PlayerSpriteRidingIdle(player.playerSprite);
             }
             if (player.playerSprite.fallSpeed >= 1f)
             {
-                player.playerState = new PlayerStateSmallJumping(player);
-                player.playerSprite = new PlayerSpriteSmallJumping(player.playerSprite);
+                player.playerState = new PlayerStateRidingJumping(player);
+                player.playerSprite = new PlayerSpriteRidingJumping(player.playerSprite);
                 player.playerSprite.fallSpeed = 1f;
             }
         }

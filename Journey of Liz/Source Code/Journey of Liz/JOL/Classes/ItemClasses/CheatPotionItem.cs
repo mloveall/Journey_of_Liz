@@ -13,7 +13,7 @@ using JOL.Interfaces;
 
 namespace JOL
 {
-    public class FireFlowerItem : IItem
+    public class CheatPotionItem : IItem
     {
         public bool toDelete { get; set; }
         Texture2D sprite;
@@ -28,12 +28,12 @@ namespace JOL
         SoundEffect sound;
         SoundEffectInstance soundInstance;
 
-        public FireFlowerItem()
+        public CheatPotionItem()
         {
             
         }
 
-        public FireFlowerItem(Texture2D sprite, int xPos, int yPos, bool isActive)
+        public CheatPotionItem(Texture2D sprite, int xPos, int yPos, bool isActive)
         {
             this.sprite = sprite;
             xPosDest = xPos;
@@ -43,7 +43,7 @@ namespace JOL
             this.isActive = isActive;
         }
 
-        public FireFlowerItem(Texture2D sprite, int xPos, int yPos, bool isActive, SoundEffect sound)
+        public CheatPotionItem(Texture2D sprite, int xPos, int yPos, bool isActive, SoundEffect sound)
         {
             this.sprite = sprite;
             xPosDest = xPos;

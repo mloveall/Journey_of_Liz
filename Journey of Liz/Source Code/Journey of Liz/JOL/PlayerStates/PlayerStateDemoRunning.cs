@@ -13,106 +13,98 @@ using Microsoft.Xna.Framework.Media;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.ItemClasses;
 using JOL.Interfaces;
-using JOL.Mario_States;
 
 namespace JOL.PlayerStates
 {
     /// <summary>
-    /// Running state of the fire Mario.
+    /// Running state of the demo player.
     /// </summary>
     
-    class PlayerStateDemoRunning : IPlayerState
+    class PlayerStateDemoRunning : PlayerState
     {
-        Player mario;
-
-        public PlayerStateDemoRunning(Player mario)
+        public PlayerStateDemoRunning(Player player) : base(player)
         {
-            this.mario = mario;
+
         }
 
-        public void Left()
+        public override void Left()
         {
-            if (mario.PlayerSprite.isFacingRight == true)
+            if (player.playerSprite.isFacingRight == true)
             {
-                mario.State = new FireIdleMarioState(mario);
-                mario.PlayerSprite = new PlayerSpriteFireIdle(mario.PlayerSprite);
+                player.playerState = new FireIdleMarioState(player);
+                player.playerSprite = new PlayerSpriteDemoIdle(player.playerSprite);
             }
             else
             {
-                mario.PlayerSprite.velocity = 3;
+                player.playerSprite.velocity = 3;
             }
         }
 
-        public void Right()
+        public override void Right()
         {
-            if (mario.PlayerSprite.isFacingRight == false)
+            if (player.playerSprite.isFacingRight == false)
             {
-                mario.State = new FireIdleMarioState(mario);
-                mario.PlayerSprite = new PlayerSpriteFireIdle(mario.PlayerSprite);
+                player.playerState = new FireIdleMarioState(player);
+                player.playerSprite = new PlayerSpriteDemoIdle(player.playerSprite);
             }
             else
             {
-                mario.PlayerSprite.velocity = 3;
+                player.playerSprite.velocity = 3;
             }
         }
 
-        public void Up()
+        public override void Up()
         {
-            mario.State = new PlayerStateDemoJumping(mario);
-            mario.PlayerSprite = new PlayerSpriteFireJumping(mario.PlayerSprite);
-            mario.PlayerSprite.soundInstance.Play();
+            player.playerState = new PlayerStateDemoJumping(player);
+            player.playerSprite = new PlayerSpriteDemoJumping(player.playerSprite);
+            player.playerSprite.soundInstance.Play();
         }
 
-        public void Down()
+        public override void Down()
         {
-            mario.State = new PlayerStateDemoCrouch(mario);
-            mario.PlayerSprite = new PlayerSpriteFireCrouch(mario.PlayerSprite);
+            player.playerState = new PlayerStateDemoCrouch(player);
+            player.playerSprite = new PlayerSpriteDemoCrouch(player.playerSprite);
         }
 
-        public void Hit()
+        public override void Hit()
         {
-            mario.State = new PlayerStateCollectBlinking(mario, new BigRunningMarioState(mario));
-            mario.PlayerSprite = new TransitionSprite(mario.PlayerSprite, new PlayerSpriteBigRunning(mario.PlayerSprite), -1);
-            mario.MyState = 2;
-            mario.PlayerSprite.soundInstance.Play();
+            player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateRidingRunning(player));
+            player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteRidingRunning(player.playerSprite), -1);
+            player.myState = 2;
+            player.playerSprite.soundInstance.Play();
         }
 
-        public void Collect(IItem item)
+        public override void Collect(IItem item)
         {
-            if (item is FireFlowerItem)
+            if (item is CheatPotionItem)
             {
-                // Do nothing since alreay in fire stage.
+                // Do nothing since alreay in demo state.
             }
-            else if (item is MushroomItem)
+            else if (item is BardieEggItem)
             {
-                // Do nothing since alreay in fire stage.
+                // Do nothing since alreay in demo state.
             }
-            else if (item is DeadMushroomItem)
+            else if (item is DeathPotionItem)
             {
-                mario.State = new DeadMarioState(mario);
-                mario.PlayerSprite = new PlayerSpriteDead(mario.PlayerSprite);
+                player.playerState = new PlayerStateDead(player);
+                player.playerSprite = new PlayerSpriteDead(player.playerSprite);
             }
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            mario.PlayerSprite.Update(gameTime);
-            if (mario.PlayerSprite.velocity <= 0.0f)
+            player.playerSprite.Update(gameTime);
+            if (player.playerSprite.velocity <= 0.0f)
             {
-                mario.State = new FireIdleMarioState(mario);
-                mario.PlayerSprite = new PlayerSpriteFireIdle(mario.PlayerSprite);
+                player.playerState = new FireIdleMarioState(player);
+                player.playerSprite = new PlayerSpriteDemoIdle(player.playerSprite);
             }
-            if (mario.PlayerSprite.fallSpeed >= 1f)
+            if (player.playerSprite.fallSpeed >= 1f)
             {
-                mario.State = new PlayerStateDemoJumping(mario);
-                mario.PlayerSprite = new PlayerSpriteFireJumping(mario.PlayerSprite);
-                mario.PlayerSprite.fallSpeed = 1f;
+                player.playerState = new PlayerStateDemoJumping(player);
+                player.playerSprite = new PlayerSpriteDemoJumping(player.playerSprite);
+                player.playerSprite.fallSpeed = 1f;
             }
-        }
-
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
-        {
-            mario.PlayerSprite.Draw(spriteBatch, camera);
         }
     }
 }

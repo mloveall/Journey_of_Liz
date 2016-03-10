@@ -18,9 +18,9 @@ namespace JOL
     public class Level
     {
         // Global variables
-        public Player mario;
-        public Player luigi;
-        public MultiPlayerHolder marios;
+        public Player player1;
+        public Player player2;
+        public MultiPlayerHolder players;
         public int lives = 3, score = 0, coins = 0;
         public bool dyingAnimation;
 
@@ -32,7 +32,7 @@ namespace JOL
         List<IBlock> blocks;
         List<IEnemy> enemies;
         List<KillZone> killZones;
-        FlagPole flagPole;
+        HangingRope flagPole;
         InstructionOne instructionOne;
         InstructionTwo instructionTwo;
         List<BigHill> bigHills;
@@ -44,11 +44,11 @@ namespace JOL
         bool isPaused;
 
         // Constructor
-        public Level(Player mario, Player luigi, List<IItem> items, List<IBlock> blocks, List<IEnemy> enemies, List<KillZone> killZones, FlagPole flagPole, InstructionOne instructionOne, InstructionTwo instructionTwo, List<BigHill> bigHills, List<Cloud> clouds, List<Portal> portals, Game1 game, ICamera camera, HeadsUpDisplay hud)
+        public Level(Player player1, Player player2, List<IItem> items, List<IBlock> blocks, List<IEnemy> enemies, List<KillZone> killZones, HangingRope flagPole, InstructionOne instructionOne, InstructionTwo instructionTwo, List<BigHill> bigHills, List<Cloud> clouds, List<Portal> portals, Game1 game, ICamera camera, HeadsUpDisplay hud)
         {
-            this.mario = mario;
-            this.luigi = luigi;
-            this.marios = new MultiPlayerHolder(mario, luigi);
+            this.player1 = player1;
+            this.player2 = player2;
+            this.players = new MultiPlayerHolder(player1, player2);
             this.items = items;
             this.blocks = blocks;
             this.enemies = enemies;
@@ -59,8 +59,8 @@ namespace JOL
             this.instructionOne = instructionOne;
             this.instructionTwo = instructionTwo;
             this.portals = portals;
-            this.keyboardController = new KeyboardController(new ToggleCrouchIdleJumpCommand(marios), new ToggleJumpIdleCrouchCommand(marios), 
-                                                        new ToggleToLeftCommand(marios), new ToggleToRightCommand(marios), new CharacterSwitchCommand(mario, luigi), new ResetCommand(mario, luigi, blocks, items), 
+            this.keyboardController = new KeyboardController(new ToggleCrouchIdleJumpCommand(players), new ToggleJumpIdleCrouchCommand(players), 
+                                                        new ToggleToLeftCommand(players), new ToggleToRightCommand(players), new CharacterSwitchCommand(player1, player2), new ResetCommand(player1, player2, blocks, items), 
                                                         new QuitCommand(game), new PauseCommand(this));
             this.camera = camera;
             this.game = game;
@@ -74,9 +74,8 @@ namespace JOL
 
             if (!isPaused)
             {
-
-                mario.Update(gameTime);
-                luigi.Update(gameTime);
+                player1.Update(gameTime);
+                player2.Update(gameTime);
 
                 if (!dyingAnimation)
                 {
@@ -105,7 +104,7 @@ namespace JOL
                         p.Update();
                     }
 
-                    CollisionHandler.HandleCollisions(mario, luigi, blocks, enemies, killZones,flagPole,portals,camera, items);
+                    CollisionHandler.HandleCollisions(player1, player2, blocks, enemies, killZones,flagPole,portals,camera, items);
                 }
                 else
                 {
@@ -175,8 +174,8 @@ namespace JOL
                 p.Draw(spriteBatch, camera);
             }
 
-            mario.Draw(spriteBatch, camera);
-            luigi.Draw(spriteBatch, camera);
+            player1.Draw(spriteBatch, camera);
+            player2.Draw(spriteBatch, camera);
 
             hud.Draw(spriteBatch);
         }

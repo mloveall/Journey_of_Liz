@@ -12,46 +12,30 @@ namespace JOL.Classes.BlockClasses
     /// An indestructible block that mainly used for decoration.
     /// </summary>
 
-    class GrassBlock : IBlock
+    class GrassBlock : Block
     {
-        // Global variables
-        public Rectangle DestRectangle { get; set; }
-        public Texture2D Texture { get; set; }
-        public bool toDelete { get; set; }
-
-        private int height = 32, width = 32;
-
-        Vector2 location;
-
         // Constructor
-        public GrassBlock(Texture2D texture, Vector2 location)
+        public GrassBlock(Texture2D texture, Vector2 location) : base(texture, location)
         {
-            Texture = texture;
-            DestRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
+            height = 32;
+            width = 32;
 
-            this.location = location;
-            toDelete = false;
+            Initialize();
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            //nothing to update for used block since no animation or change
+            // Nothing to update for used block since no animation or change
         }
 
-        public void Reset()
+        public override void Reset()
         {
-
+            // Nothing need to be reset
         }
 
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
+        public override void Bump(Player mario)
         {
-            Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
-            spriteBatch.Draw(Texture, relativeDestRectangle, Color.White);
-        }
-
-        public void Bump(Player mario)
-        {
-            
+            // Nothing happens when being bumped
         }
     }
 }

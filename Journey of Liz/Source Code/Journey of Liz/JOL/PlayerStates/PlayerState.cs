@@ -12,12 +12,11 @@ using Microsoft.Xna.Framework.Media;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.ItemClasses;
 using JOL.Interfaces;
-using JOL.Mario_States;
 
 namespace JOL.PlayerStates
 {
     /// <summary>
-    /// Idle state of the big Mario.
+    /// A general state that is being used as the parent of every specific state.
     /// </summary>
 
     class PlayerState : IPlayerState
@@ -61,12 +60,12 @@ namespace JOL.PlayerStates
 
         public virtual void Update(GameTime gameTime)
         {
-            player.PlayerSprite.Update(gameTime);
+            player.playerSprite.Update(gameTime);
         }
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            player.PlayerSprite.Draw(spriteBatch, camera);
+            player.playerSprite.Draw(spriteBatch, camera);
         }
     }
 }

@@ -17,51 +17,39 @@ using JOL.Interfaces;
 namespace JOL
 {
     /// <summary>
-    /// Death state of Mario.
+    /// Death state of the player.
     /// </summary>
 
-    class DeadMarioState : IPlayerState
+    class PlayerStateDead : PlayerState
     {
-        Player mario;
-
-        public DeadMarioState(Player mario)
+        public PlayerStateDead(Player player) : base(player)
         {
-            this.mario = mario;
+            
         }
 
         // Disable all the controls
-        public void Left()
+        public override void Left()
         {
         }
 
-        public void Right()
+        public override void Right()
         {
         }
 
-        public void Up()
+        public override void Up()
         {
         }
 
-        public void Down()
+        public override void Down()
         {
         }
 
-        public void Hit()
+        public override void Hit()
         {
         }
 
-        public void Collect(IItem item)
+        public override void Collect(IItem item)
         {
-        }
-
-        public void Update(GameTime gameTime)
-        {
-            mario.PlayerSprite.Update(gameTime);
-        }
-
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
-        {
-            mario.PlayerSprite.Draw(spriteBatch,camera);
         }
     }
 }

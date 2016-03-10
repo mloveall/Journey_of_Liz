@@ -17,7 +17,7 @@ namespace JOL.Classes.BlockClasses
         // Global variables
         public bool toDelete { get; set; }
         public Texture2D Texture { get; set; }
-        public Rectangle DestRectangle { get; set; }
+        public Rectangle destRectangle { get; set; }
         
         private int height = 32, width = 32;
 
@@ -28,7 +28,7 @@ namespace JOL.Classes.BlockClasses
         {
             Texture = texture;
             this.location = location;
-            DestRectangle = new Rectangle((int)location.X, (int)location.Y, 32, 32);
+            destRectangle = new Rectangle((int)location.X, (int)location.Y, 32, 32);
             toDelete = false;
         }
 

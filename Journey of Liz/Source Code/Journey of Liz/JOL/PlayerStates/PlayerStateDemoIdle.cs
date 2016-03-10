@@ -13,91 +13,78 @@ using JOL.PlayerStates;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.ItemClasses;
 using JOL.Interfaces;
-using JOL.Mario_States;
 
 namespace JOL
 {
     /// <summary>
-    /// Idle state of the fire Mario.
+    /// Idle state of the demo player.
     /// </summary>
 
-    class FireIdleMarioState : IPlayerState
+    class FireIdleMarioState : PlayerState
     {
-        Player mario;
-
-        public FireIdleMarioState(Player mario)
+        public FireIdleMarioState(Player player) : base(player)
         {
-            this.mario = mario;
+            
         }
 
-        public void Left()
+        public override void Left()
         {
-            if (mario.PlayerSprite.isFacingRight == false)
+            if (player.playerSprite.isFacingRight == false)
             {
-                mario.State = new PlayerStateDemoRunning(mario);
-                mario.PlayerSprite = new PlayerSpriteFireRunning(mario.PlayerSprite);
+                player.playerState = new PlayerStateDemoRunning(player);
+                player.playerSprite = new PlayerSpriteDemoRunning(player.playerSprite);
             }
             else
-                mario.PlayerSprite.isFacingRight = false;
+                player.playerSprite.isFacingRight = false;
         }
 
-        public void Right()
+        public override void Right()
         {
-            if (mario.PlayerSprite.isFacingRight == true)
+            if (player.playerSprite.isFacingRight == true)
             {
-                mario.State = new PlayerStateDemoRunning(mario);
-                mario.PlayerSprite = new PlayerSpriteFireRunning(mario.PlayerSprite);
+                player.playerState = new PlayerStateDemoRunning(player);
+                player.playerSprite = new PlayerSpriteDemoRunning(player.playerSprite);
             }
             else
-                mario.PlayerSprite.isFacingRight = true;
+                player.playerSprite.isFacingRight = true;
         }
 
-        public void Up()
+        public override void Up()
         {
-            mario.State = new PlayerStateDemoJumping(mario);
-            mario.PlayerSprite = new PlayerSpriteFireJumping(mario.PlayerSprite);
-            mario.PlayerSprite.soundInstance.Play();
+            player.playerState = new PlayerStateDemoJumping(player);
+            player.playerSprite = new PlayerSpriteDemoJumping(player.playerSprite);
+            player.playerSprite.soundInstance.Play();
         }
 
-        public void Down()
+        public override void Down()
         {
-            mario.State = new PlayerStateDemoCrouch(mario);
-            mario.PlayerSprite = new PlayerSpriteFireCrouch(mario.PlayerSprite);
+            player.playerState = new PlayerStateDemoCrouch(player);
+            player.playerSprite = new PlayerSpriteDemoCrouch(player.playerSprite);
         }
 
-        public void Hit()
+        public override void Hit()
         {
-            mario.State = new PlayerStateCollectBlinking(mario, new BigIdleMarioState(mario));
-            mario.PlayerSprite = new TransitionSprite(mario.PlayerSprite, new PlayerSpriteBigIdle(mario.PlayerSprite), -1);
-            mario.MyState = 2;
-            mario.PlayerSprite.soundInstance.Play();
+            player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateRidingIdle(player));
+            player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteRidingIdle(player.playerSprite), -1);
+            player.myState = 2;
+            player.playerSprite.soundInstance.Play();
         }
 
-        public void Collect(IItem item)
+        public override void Collect(IItem item)
         {
-            if (item is FireFlowerItem)
+            if (item is CheatPotionItem)
             {
-                // Do nothing since alreay in fire stage.
+                // Do nothing since alreay in demo state.
             }
-            else if (item is MushroomItem)
+            else if (item is BardieEggItem)
             {
-                // Do nothing since alreay in fire stage.
+                // Do nothing since alreay in demo state.
             }
-            else if (item is DeadMushroomItem)
+            else if (item is DeathPotionItem)
             {
-                mario.State = new DeadMarioState(mario);
-                mario.PlayerSprite = new PlayerSpriteDead(mario.PlayerSprite);
+                player.playerState = new PlayerStateDead(player);
+                player.playerSprite = new PlayerSpriteDead(player.playerSprite);
             }
-        }
-
-        public void Update(GameTime gameTime)
-        {
-            mario.PlayerSprite.Update(gameTime);
-        }
-
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
-        {
-            mario.PlayerSprite.Draw(spriteBatch, camera);
         }
     }
 }

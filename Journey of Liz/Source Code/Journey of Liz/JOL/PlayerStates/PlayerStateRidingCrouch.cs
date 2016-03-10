@@ -9,6 +9,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using JOL.PlayerStates;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.ItemClasses;
 using JOL.Interfaces;
@@ -16,12 +17,12 @@ using JOL.Interfaces;
 namespace JOL.PlayerStates
 {
     /// <summary>
-    /// Crouch state of the small player.
+    /// Crouch state of the riding player.
     /// </summary>
-    
-    class PlayerStateSmallCrouch : PlayerState
+
+    class PlayerStateRidingCrouch : PlayerState
     {
-        public PlayerStateSmallCrouch(Player player) : base(player)
+        public PlayerStateRidingCrouch(Player player) : base(player)
         {
             
         }
@@ -30,8 +31,8 @@ namespace JOL.PlayerStates
         {
             if (player.playerSprite.isFacingRight == false)
             {
-                player.playerState = new PlayerStateSmallRunning(player);
-                player.playerSprite = new PlayerSpriteSmallRunning(player.playerSprite);
+                player.playerState = new PlayerStateRidingRunning(player);
+                player.playerSprite = new PlayerSpriteRidingRunning(player.playerSprite);
             }
             else
                 player.playerSprite.isFacingRight = false;
@@ -41,8 +42,8 @@ namespace JOL.PlayerStates
         {
             if (player.playerSprite.isFacingRight == true)
             {
-                player.playerState = new PlayerStateSmallRunning(player);
-                player.playerSprite = new PlayerSpriteSmallRunning(player.playerSprite);
+                player.playerState = new PlayerStateRidingRunning(player);
+                player.playerSprite = new PlayerSpriteRidingRunning(player.playerSprite);
             }
             else
                 player.playerSprite.isFacingRight = true;
@@ -50,18 +51,15 @@ namespace JOL.PlayerStates
 
         public override void Up()
         {
-            player.playerState = new PlayerStateSmallJumping(player);
-            player.playerSprite = new PlayerSpriteSmallJumping(player.playerSprite);
+            player.playerState = new PlayerStateRidingIdle(player);
+            player.playerSprite = new PlayerSpriteRidingIdle(player.playerSprite);
         }
 
         public override void Hit()
         {
-            player.playerState = new PlayerStateDead(player);
-            player.playerSprite = new PlayerSpriteDead(player.playerSprite);
-            player.myState = 0;
-            player.level.lives--;
-            player.level.dyingAnimation = true;
-            player.MediaManager(2);
+            player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateSmallIdle(player));
+            player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteSmallIdle(player.playerSprite), -1);
+            player.myState = 1;
             player.playerSprite.soundInstance.Play();
         }
 
@@ -76,16 +74,12 @@ namespace JOL.PlayerStates
             }
             else if (item is BardieEggItem)
             {
-                player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateRidingCrouch(player));
-                player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteRidingCrouch(player.playerSprite), 1);
-                player.myState = 2;
-                player.playerSprite.soundInstance.Play();
+                // Do nothing since player is already in riding state.
             }
             else if (item is DeathPotionItem)
             {
                 player.playerState = new PlayerStateDead(player);
                 player.playerSprite = new PlayerSpriteDead(player.playerSprite);
-                player.myState = 0;
             }
         }
     }

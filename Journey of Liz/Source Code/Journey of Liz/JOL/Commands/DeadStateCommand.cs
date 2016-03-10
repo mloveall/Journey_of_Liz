@@ -16,7 +16,7 @@ namespace JOL
 
         public void Execute()
         {
-            mario.Collect(new DeadMushroomItem());
+            mario.Collect(new DeathPotionItem());
         }
 
     }

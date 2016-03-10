@@ -5,18 +5,18 @@ using System.Text;
 
 namespace JOL.Commands
 {
-    class BigStateCommand : ICommand
+    class RidingStateCommand : ICommand
     {
-          Player mario;
+          Player player;
 
-          public BigStateCommand(Player mario)
+          public RidingStateCommand(Player player)
         {
-            this.mario = mario;
+            this.player = player;
         }
 
         public void Execute()
         {
-            mario.Collect(new MushroomItem());
+            player.Collect(new BardieEggItem());
         }
     }
 }

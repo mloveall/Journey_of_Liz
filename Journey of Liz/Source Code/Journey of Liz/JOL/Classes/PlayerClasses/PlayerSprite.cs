@@ -31,18 +31,14 @@ namespace JOL.Classes.PlayerClasses
         public bool isFacingRight { get; set; }
         public bool isMoving { get; set; }
 
-
         public PlayerSprite(IPlayerSprite previousSprite)
         {
-            isFacingRight = previousSprite.isFacingRight;
-            spritePosition = new Vector2(previousSprite.spritePosition.X, previousSprite.spritePosition.Y - (spriteHeight - previousSprite.destRectangle.Height));
             contentManager = previousSprite.contentManager;
-            destRectangle = new Rectangle((int)spritePosition.X, (int)spritePosition.Y, spriteWidth, spriteHeight);
-            botRectangle = new Rectangle((int)spritePosition.X, ((int)spritePosition.Y + 32), spriteWidth, spriteHeight);
             starTimer = previousSprite.starTimer;
             sprite = contentManager.Load<Texture2D>("Liz/liz_idle");
             isMoving = false;
             isJumping = false;
+            isFacingRight = previousSprite.isFacingRight;
             fallSpeed = previousSprite.fallSpeed;
             tint = Color.White;
         }
@@ -50,17 +46,27 @@ namespace JOL.Classes.PlayerClasses
         public PlayerSprite(ContentManager content)
         {
             contentManager = content;
-            isFacingRight = true;
-            spritePosition = new Vector2(385, 225);
-            destRectangle = new Rectangle((int)spritePosition.X, (int)spritePosition.Y, spriteWidth, spriteHeight);
-            botRectangle = new Rectangle((int)spritePosition.X, ((int)spritePosition.Y + 3), spriteWidth, spriteHeight);
             sprite = contentManager.Load<Texture2D>("Liz/liz_idle");
             isMoving = false;
             isJumping = false;
+            isFacingRight = true;
             fallSpeed = 0f;
             tint = Color.White;
         }
 
+        public void Initialize()
+        {
+            spritePosition = new Vector2(385, 225);
+            destRectangle = new Rectangle((int)spritePosition.X, (int)spritePosition.Y, spriteWidth, spriteHeight);
+            botRectangle = new Rectangle((int)spritePosition.X, ((int)spritePosition.Y + 32), spriteWidth, spriteHeight);
+        }
+
+        public void Initialize(IPlayerSprite previousSprite)
+        {
+            spritePosition = new Vector2(previousSprite.spritePosition.X, previousSprite.spritePosition.Y - (spriteHeight - previousSprite.destRectangle.Height));
+            destRectangle = new Rectangle((int)spritePosition.X, (int)spritePosition.Y, spriteWidth, spriteHeight);
+            botRectangle = new Rectangle((int)spritePosition.X, ((int)spritePosition.Y + 32), spriteWidth, spriteHeight);
+        }
 
         public virtual void Update(GameTime gameTime)
         {
@@ -87,10 +93,11 @@ namespace JOL.Classes.PlayerClasses
 
         }
 
-        public virtual void MoveTo(int xPosition, int yPosition)
+        public void MoveTo(int xPosition, int yPosition)
         {
             spritePosition = new Vector2(xPosition, yPosition);
             destRectangle = new Rectangle((int)spritePosition.X, (int)spritePosition.Y, spriteWidth, spriteHeight);
+            botRectangle = new Rectangle((int)spritePosition.X, ((int)spritePosition.Y + 32), spriteWidth, spriteHeight);
         }
     }
 }

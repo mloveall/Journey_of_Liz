@@ -93,14 +93,14 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Journey of Liz.exe" size="212480">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Journey of Liz.exe" size="185856">
       <assemblyIdentity name="Journey of Liz" version="1.0.0.0" language="neutral" processorArchitecture="x86" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
-        <dsig:DigestValue>5q6pUthMligOmjs9YmKhFUqC7OE=</dsig:DigestValue>
+        <dsig:DigestValue>FrQqXR6B54GBs1LXHAKtH7S8lAU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

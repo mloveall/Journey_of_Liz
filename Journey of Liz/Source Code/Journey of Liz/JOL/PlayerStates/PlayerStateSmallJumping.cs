@@ -12,96 +12,73 @@ using Microsoft.Xna.Framework.Media;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.ItemClasses;
 using JOL.Interfaces;
-using JOL.Mario_States;
 
 namespace JOL.PlayerStates
 {
     /// <summary>
-    /// Jumping state of the small Mario.
+    /// Jumping state of the small player.
     /// </summary>
 
-    class PlayerStateSmallJumping: IPlayerState
+    class PlayerStateSmallJumping: PlayerState
     {
-        Player player;
-
-        public PlayerStateSmallJumping(Player player)
+        public PlayerStateSmallJumping(Player player) : base(player)
         {
-            this.player = player;
+
         }
 
-        public void Left()
+        public override void Left()
         {
-            if (player.PlayerSprite.isFacingRight == false)
+            if (player.playerSprite.isFacingRight == false)
             {
-                player.PlayerSprite.isMoving = true;
+                player.playerSprite.isMoving = true;
             }
             else
-                player.PlayerSprite.isFacingRight = false;
+                player.playerSprite.isFacingRight = false;
         }
 
-        public void Right()
+        public override void Right()
         {
-            if (player.PlayerSprite.isFacingRight == true)
+            if (player.playerSprite.isFacingRight == true)
             {
-                player.PlayerSprite.isMoving = true;
+                player.playerSprite.isMoving = true;
             }
             else
-                player.PlayerSprite.isFacingRight = true;
+                player.playerSprite.isFacingRight = true;
         }
 
-        public void Up()
+        public override void Hit()
         {
-            // Do nothing since already jumping.
-        }
-
-        public void Down()
-        {
-            // Do nothing.
-        }
-
-        public void Hit()
-        {
-            player.State = new DeadMarioState(player);
-            player.PlayerSprite = new PlayerSpriteDead(player.PlayerSprite);
-            player.MyState = 0;
+            player.playerState = new PlayerStateDead(player);
+            player.playerSprite = new PlayerSpriteDead(player.playerSprite);
+            player.myState = 0;
             player.level.lives--;
             player.level.dyingAnimation = true;
             player.MediaManager(2);
-            player.PlayerSprite.soundInstance.Play();
+            player.playerSprite.soundInstance.Play();
         }
 
-        public void Collect(IItem item)
+        public override void Collect(IItem item)
         {
-            if (item.GetType().Equals(new FireFlowerItem().GetType()))
+            if (item.GetType().Equals(new CheatPotionItem().GetType()))
             {
-                player.State = new PlayerStateCollectBlinking(player, new PlayerStateDemoJumping(player));
-                player.PlayerSprite = new TransitionSprite(player.PlayerSprite, new PlayerSpriteFireJumping(player.PlayerSprite), 1);
-                player.MyState = 3;
-                player.PlayerSprite.soundInstance.Play();
+                player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateDemoJumping(player));
+                player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteDemoJumping(player.playerSprite), 1);
+                player.myState = 3;
+                player.playerSprite.soundInstance.Play();
             }
-            else if (item.GetType().Equals(new MushroomItem().GetType()))
+            else if (item.GetType().Equals(new BardieEggItem().GetType()))
             {
-                player.State = new PlayerStateCollectBlinking(player, new PlayerStateBigJumping(player));
-                player.PlayerSprite = new TransitionSprite(player.PlayerSprite, new PlayerSpriteBigJumping(player.PlayerSprite), 1);
-                player.MyState = 2;
-                player.PlayerSprite.soundInstance.Play();
+                player.playerState = new PlayerStateCollectBlinking(player, new PlayerStateRidingJumping(player));
+                player.playerSprite = new TransitionSprite(player.playerSprite, new PlayerSpriteRidingJumping(player.playerSprite), 1);
+                player.myState = 2;
+                player.playerSprite.soundInstance.Play();
             }
-            else if (item.GetType().Equals(new DeadMushroomItem().GetType()))
+            else if (item.GetType().Equals(new DeathPotionItem().GetType()))
             {
-                player.State = new DeadMarioState(player);
-                player.PlayerSprite = new PlayerSpriteDead(player.PlayerSprite);
-                player.MyState = 0;
+                player.playerState = new PlayerStateDead(player);
+                player.playerSprite = new PlayerSpriteDead(player.playerSprite);
+                player.myState = 0;
             }
-        }
-
-        public void Update(GameTime gameTime)
-        {
-            player.PlayerSprite.Update(gameTime);
-        }
-
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
-        {
-            player.PlayerSprite.Draw(spriteBatch, camera);
         }
     }
 }

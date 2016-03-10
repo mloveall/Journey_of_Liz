@@ -14,7 +14,7 @@ using JOL.Interfaces;
 
 namespace JOL
 {
-    class KoopaEnemy : IEnemy
+    class EvilBardieEnemy : IEnemy
     {
         public bool toDelete { get; set; }
         public enum KoopaState { offScreen, normal, stoppedShell, movingShell, transition, dead };
@@ -43,7 +43,7 @@ namespace JOL
         private static int NUMBER_OF_FRAMES = 2, FRAME_WIDTH = 20, FRAME_DELAY = 15;
         private static int UNSHELL_TIME = 240, TRANSITION_TIME = 120, SHELL_FRAME=2, TRANSITION_FRAME=3;
 
-        public KoopaEnemy(Texture2D sprite, int xPos, int yPos)
+        public EvilBardieEnemy(Texture2D sprite, int xPos, int yPos)
         {
             this.sprite = sprite;
             xPosDest = xPos;
@@ -53,7 +53,7 @@ namespace JOL
             toDelete = false;
         }
 
-        public KoopaEnemy(Texture2D sprite, SoundEffect sound, int xPos, int yPos)
+        public EvilBardieEnemy(Texture2D sprite, SoundEffect sound, int xPos, int yPos)
         {
             this.sprite = sprite;
             xPosDest = xPos;
@@ -66,7 +66,7 @@ namespace JOL
             IsAlive = false;
         }
 
-        public KoopaEnemy()
+        public EvilBardieEnemy()
         {
             
         }
@@ -215,7 +215,8 @@ namespace JOL
             DestRectangle = new Rectangle(xPosition, yPosition, magnifier * WIDTH, magnifier * HEIGHT);
         }
 
-        public bool Hit(CollisionDetection.CollisionType collisionType, bool hitRight) //Hit returns whether the hit was dangerous for mario
+        // Returns whether the hit was dangerous for player
+        public bool Hit(CollisionDetection.CollisionType collisionType, bool hitRight) 
         {
             bool isHit = false;
             switch (collisionType)

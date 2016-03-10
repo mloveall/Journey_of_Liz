@@ -37,16 +37,16 @@ namespace JOL.Commands
                 items[i].Reset();
             }
 
-            Vector2 tempPos = mario.PlayerSprite.spritePosition;
+            Vector2 tempPos = mario.playerSprite.spritePosition;
             tempPos.X = 448;
             tempPos.Y = 352;
-            mario.PlayerSprite.spritePosition = tempPos;
-            mario.State = new PlayerStateSmallIdle(mario);
-            mario.PlayerSprite = new PlayerSpriteSmallIdle(mario.PlayerSprite);
-            mario.PlayerSprite.isFacingRight = true;
-            mario.PlayerSprite.starTimer = 0;
-            mario.MyState = 1;
-            mario.PlayerSprite.fallSpeed = 0f;
+            mario.playerSprite.spritePosition = tempPos;
+            mario.playerState = new PlayerStateSmallIdle(mario);
+            mario.playerSprite = new PlayerSpriteSmallIdle(mario.playerSprite);
+            mario.playerSprite.isFacingRight = true;
+            mario.playerSprite.starTimer = 0;
+            mario.myState = 1;
+            mario.playerSprite.fallSpeed = 0f;
             mario.MediaManager(1);
         }
     }

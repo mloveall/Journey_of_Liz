@@ -25,8 +25,9 @@ namespace JOL.Classes.PlayerClasses
             isMoving = true;
             isJumping = false;
             velocity = 3.0f;
-        }
 
+            Initialize(previousSprite);
+        }
 
         public override void Update(GameTime gameTime)
         {
@@ -87,13 +88,5 @@ namespace JOL.Classes.PlayerClasses
                 spriteBatch.Draw(sprite, relativeDestRectangle, new Rectangle(currentFrame * spriteWidth, 0, spriteWidth, spriteHeight), tint, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 1);
             }          
         }
-
-        public override void MoveTo(int xPosition, int yPosition)
-        {
-            spritePosition = new Vector2(xPosition, yPosition);
-            destRectangle = new Rectangle((int)spritePosition.X, (int)spritePosition.Y, spriteWidth, spriteHeight);
-            botRectangle = new Rectangle((int)spritePosition.X,((int)spritePosition.Y + 32), spriteWidth, spriteHeight);
-        }
-
     }
 }

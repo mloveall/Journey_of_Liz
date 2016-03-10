@@ -8,7 +8,7 @@ using JOL.Interfaces;
 
 namespace JOL.Classes.ItemClasses
 {
-    public class StarItem : IItem
+    public class StealthPotionItem : IItem
     {
         public bool toDelete { get; set; }
         public bool isActive { get; set; }
@@ -26,12 +26,12 @@ namespace JOL.Classes.ItemClasses
         private static int NUMBER_OF_FRAMES = 4, FRAME_WIDTH = 20,  FRAME_DELAY = 15;
         private static int HEIGHT = 16, WIDTH = 16, STAR_SPEED = 2;
 
-        public StarItem()
+        public StealthPotionItem()
         {
             
         }
 
-        public StarItem(Texture2D sprite, int xPos, int yPos, bool isActive)
+        public StealthPotionItem(Texture2D sprite, int xPos, int yPos, bool isActive)
         {
             this.sprite = sprite;
             xPosDest = xPos;

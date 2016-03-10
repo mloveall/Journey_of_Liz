@@ -11,7 +11,6 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.ItemClasses;
-using JOL.Mario_States;
 using JOL.Interfaces;
 
 namespace JOL.PlayerStates
@@ -20,56 +19,49 @@ namespace JOL.PlayerStates
     /// Animating the transition from one stage to another.
     /// </summary>
 
-    class PlayerStateCollectBlinking : IPlayerState
+    class PlayerStateCollectBlinking : PlayerState
     {
-        Player mario;
-        IPlayerState nextMarioState;
+        IPlayerState nextPlayerState;
 
-        public PlayerStateCollectBlinking(Player mario, IPlayerState nextMarioState)
+        public PlayerStateCollectBlinking(Player player, IPlayerState nextPlayerState) : base(player)
         {
-            this.mario = mario;
-            this.nextMarioState = nextMarioState;
+            this.nextPlayerState = nextPlayerState;
         }
 
         // Disable all the controls
-        public void Left()
+        public override void Left()
         {
         }
 
-        public void Right()
+        public override void Right()
         {
         }
 
-        public void Up()
+        public override void Up()
         {
         }
 
-        public void Down()
+        public override void Down()
         {
         }
 
-        public void Hit()
+        public override void Hit()
         {
         }
 
-        public void Collect(IItem item)
+        public override void Collect(IItem item)
         {
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            mario.PlayerSprite.Update(gameTime);
-            TransitionSprite sprite = (TransitionSprite) mario.PlayerSprite;
+            player.playerSprite.Update(gameTime);
+            TransitionSprite sprite = (TransitionSprite) player.playerSprite;
             if (sprite.doneTransitioning)
             {
-                mario.State = nextMarioState;
-                mario.PlayerSprite = sprite.nextMarioSprite;
+                player.playerState = nextPlayerState;
+                player.playerSprite = sprite.nextPlayerSprite;
             }
-        }
-
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
-        {
-            mario.PlayerSprite.Draw(spriteBatch, camera);
         }
     }
 }

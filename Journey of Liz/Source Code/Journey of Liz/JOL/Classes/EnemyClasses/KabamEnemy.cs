@@ -13,7 +13,7 @@ using JOL.Interfaces;
 
 namespace JOL
 {
-    public class GoombaEnemy : IEnemy
+    public class KabamEnemy : IEnemy
     {
         public bool toDelete { get; set; }
         Texture2D sprite;
@@ -33,7 +33,7 @@ namespace JOL
         int currentFrame = 0, frameDelayClock = 0,  deadTimer=0;
         private static int GOOMBA_SPEED = 2, NUMBER_OF_FRAMES = 2, FRAME_WIDTH = 20, FRAME_DELAY = 15, DEAD_LENGTH = 10;
 
-        public GoombaEnemy(Texture2D sprite, SoundEffect sound, int xPos, int yPos)
+        public KabamEnemy(Texture2D sprite, SoundEffect sound, int xPos, int yPos)
         {
             this.sprite = sprite;
             xPosDest = xPos;

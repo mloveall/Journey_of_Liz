@@ -27,7 +27,7 @@ namespace JOL
         // Global variables
         static int modifier = 0;
 
-        Texture2D marioTexture;
+        Texture2D playerTexture;
         Texture2D blockUsedTexture, blockBrickTexture, blockGrassTexture, blockSandTexture, blockHiddenTexture, blockQuestionTexture, blockStairPyramidTexture, blockBluePortalTexture, blockOrangePortalTexture, blockJumpTexture;
         Texture2D[] blockFloorTextures;
         Texture2D itemCoinTexture, itemFireFlowerTexture, itemMushroomTexture, itemOneUpMushroomTexture, itemStarTexture;
@@ -44,7 +44,7 @@ namespace JOL
         public LevelBuilder(ContentManager content)
         {
             // Loads textures to each of the manager
-            marioTexture = content.Load<Texture2D>("Liz/liz_idle");
+            playerTexture = content.Load<Texture2D>("Liz/liz_idle");
             blockBrickTexture = content.Load<Texture2D>("Blocks/brickBlock");
             blockGrassTexture = content.Load<Texture2D>("Blocks/grassBlock");
             blockSandTexture = content.Load<Texture2D>("Blocks/sandBlock");
@@ -91,13 +91,13 @@ namespace JOL
             List<IEnemy> enemies = new List<IEnemy>();
             List<KillZone> killZones = new List<KillZone>();
             List<Portal> portals = new List<Portal>();
-            FlagPole flagPole = null;
+            HangingRope flagPole = null;
             List<BigHill> bigHills = new List<BigHill>();
             List<Cloud> clouds = new List<Cloud>();
             InstructionOne instructionOne = null;
             InstructionTwo instructionTwo = null;
-            Player mario = null;
-            Player luigi = null;
+            Player player1 = null;
+            Player player2 = null;
             ICamera camera;
             Random rand = new Random();
             string path = "Content/Levels/level"+ levelNum + ".csv";
@@ -147,7 +147,7 @@ namespace JOL
                             }
                         case 'f': // Load a flag
                             {
-                                flagPole = new FlagPole(flagPoleTexture, new Vector2(modifier + i * 32 - 16, j * 32 - 304 + 32));
+                                flagPole = new HangingRope(flagPoleTexture, new Vector2(modifier + i * 32 - 16, j * 32 - 304 + 32));
                                 index++;
 
                                 break;
@@ -198,7 +198,7 @@ namespace JOL
                                                 {
                                                     container = new EmptyItemContainer();
                                                 }
-                                                blocks.Add(new BrickBlock(blockBrickTexture, new Vector2(modifier + i * 32, j * 32), container, soundBreakBlock));
+                                                blocks.Add(new IceBlock(blockBrickTexture, new Vector2(modifier + i * 32, j * 32), container, soundBreakBlock));
                                                 break;
                                             }
                                         }
@@ -262,7 +262,7 @@ namespace JOL
                                             {
                                                 container = new EmptyItemContainer();
                                             }
-                                            blocks.Add(new QuestionBlock(blockQuestionTexture, blockUsedTexture, new Vector2(modifier + i * 32, j * 32), container));
+                                            blocks.Add(new TreasureBlock(blockQuestionTexture, blockUsedTexture, new Vector2(modifier + i * 32, j * 32), container));
                                             break;
                                         }
                                     case 's': // Stair block
@@ -295,12 +295,12 @@ namespace JOL
                                 {
                                     case 'f': // Fire flower
                                         {
-                                            items.Add(new FireFlowerItem(itemFireFlowerTexture, modifier + i * 32, j * 32, true, soundAppears));
+                                            items.Add(new CheatPotionItem(itemFireFlowerTexture, modifier + i * 32, j * 32, true, soundAppears));
                                             break;
                                         }
                                     case 'm': // Mushroom
                                         {
-                                            items.Add(new MushroomItem(itemMushroomTexture, modifier + i * 32, j * 32, true, soundAppears));
+                                            items.Add(new BardieEggItem(itemMushroomTexture, modifier + i * 32, j * 32, true, soundAppears));
                                             break;
                                         }
                                     case 'u': // One-up mushroom
@@ -315,7 +315,7 @@ namespace JOL
                                         }
                                     case 's': // Star
                                         {
-                                            items.Add(new StarItem(itemStarTexture, modifier + i * 32, j * 32, true));
+                                            items.Add(new StealthPotionItem(itemStarTexture, modifier + i * 32, j * 32, true));
                                             break;
                                         }
                                     default:
@@ -333,12 +333,12 @@ namespace JOL
                                 {
                                     case 'g': // Goomba
                                         {
-                                            enemies.Add(new GoombaEnemy(enemyGoombaTexture, soundKick, modifier + i * 32, j * 32));
+                                            enemies.Add(new KabamEnemy(enemyGoombaTexture, soundKick, modifier + i * 32, j * 32));
                                             break;
                                         }
                                     case 'k': // Koopa
                                         {
-                                            enemies.Add(new KoopaEnemy(enemyKoopaTexture, soundKick, modifier + i * 32, j * 32));
+                                            enemies.Add(new EvilBardieEnemy(enemyKoopaTexture, soundKick, modifier + i * 32, j * 32));
                                             break;
                                         }
                                     default:
@@ -350,12 +350,12 @@ namespace JOL
                             }
                         case 'm': // Load a Mario (character 1)
                             {
-                                mario = new Player(marioTexture, content, new Vector2(modifier + i * 32, j * 32), false);
+                                player1 = new Player(playerTexture, content, new Vector2(modifier + i * 32, j * 32), false);
                                 break;
                             }
                         case 'l': // Load a Luigi (character 2)
                             {
-                                luigi = new Player(marioTexture, content, new Vector2(modifier + i * 32, j * 32), true);
+                                player2 = new Player(playerTexture, content, new Vector2(modifier + i * 32, j * 32), true);
                                 break;
                             }
                         case ',': // Load an empty space
@@ -373,11 +373,11 @@ namespace JOL
                 j++;
             }
 
-            MultiPlayerHolder holder = new MultiPlayerHolder(mario, luigi);
+            MultiPlayerHolder holder = new MultiPlayerHolder(player1, player2);
             camera = new FollowCharacterCamera(holder, game.Window.ClientBounds.Height, game.Window.ClientBounds.Width);
             HeadsUpDisplay hud = new HeadsUpDisplay(hudFont);
 
-            level = new Level(mario, luigi, items, blocks, enemies, killZones, flagPole, instructionOne, instructionTwo, bigHills, clouds, portals, game, camera, hud);
+            level = new Level(player1, player2, items, blocks, enemies, killZones, flagPole, instructionOne, instructionTwo, bigHills, clouds, portals, game, camera, hud);
             if (previousLevel != null)
             {
                 level.score = previousLevel.score;
@@ -385,8 +385,8 @@ namespace JOL
             }
             
             hud.setLevel(level);
-            mario.level = level;
-            luigi.level = level;
+            player1.level = level;
+            player2.level = level;
             LinkPortalBlocks(blocks);
             LinkPortals(portals);
 
@@ -466,7 +466,7 @@ namespace JOL
                 {
                     case 'f': // Fire flower
                         {
-                            item = new FireFlowerItem(itemFireFlowerTexture, x, y, false, soundAppears);
+                            item = new CheatPotionItem(itemFireFlowerTexture, x, y, false, soundAppears);
                             items.Add(item);
                             containerItems.Add(item);
                             System.Console.Out.WriteLine("fireflower added to block");
@@ -474,7 +474,7 @@ namespace JOL
                         }
                     case 'm': // Mushroom
                         {
-                            item = new MushroomItem(itemMushroomTexture, x, y, false, soundAppears);
+                            item = new BardieEggItem(itemMushroomTexture, x, y, false, soundAppears);
                             items.Add(item);
                             containerItems.Add(item);
                             break;
@@ -495,7 +495,7 @@ namespace JOL
                         }
                     case 's': // Star
                         {
-                            item = new StarItem(itemStarTexture, x, y, false);
+                            item = new StealthPotionItem(itemStarTexture, x, y, false);
                             items.Add(item);
                             containerItems.Add(item);
                             break;

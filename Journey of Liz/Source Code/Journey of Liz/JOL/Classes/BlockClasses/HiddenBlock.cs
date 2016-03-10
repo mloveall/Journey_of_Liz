@@ -13,43 +13,37 @@ namespace JOL.Classes.BlockClasses
     /// A hidden block that can be bumped to display.
     /// </summary>
 
-    class HiddenBlock : IBlock
+    class HiddenBlock : Block
     {
-        // Global variables
-        public Rectangle DestRectangle { get; set; }
-        public bool toDelete { get; set; }
         public bool isHidden;
-
-        private int height = 32, width = 32;
-
         IItemContainer itemContainer;
         Texture2D exposedTexture, hiddenTexture;
-        Vector2 location;
 
         // Constructor
-        public HiddenBlock(Texture2D hiddenTexture, Texture2D exposedTexture, Vector2 location, IItemContainer itemContainer)
+        public HiddenBlock(Texture2D hiddenTexture, Texture2D exposedTexture, Vector2 location, IItemContainer itemContainer) : base(exposedTexture, location)
         {
+            height = 32;
+            width = 32;
             this.hiddenTexture = hiddenTexture;
             this.exposedTexture = exposedTexture;
-            DestRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
-            isHidden = true;
-            this.location = location;
-            toDelete = false;
+            this.isHidden = true;
             this.itemContainer = itemContainer;
+
+            Initialize();
         }
 
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-
+            // Nothing to update for used block since no animation or change
         }
 
-        public void Reset()
+        public override void Reset()
         {
             isHidden = true;
         }
 
         // Don't draw anything until it is being bumbed.
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
+        public override void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
             Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
             if(isHidden)
@@ -58,11 +52,10 @@ namespace JOL.Classes.BlockClasses
                 spriteBatch.Draw(exposedTexture, relativeDestRectangle, Color.White);
         }
 
-        // Bump is called when Mario hits the bottom of the block
-        public void Bump(Player mario)
+        public override void Bump(Player player)
         {
             bool isSmallMario = false;
-            if (mario.MyState == 1)
+            if (player.myState == 1)
             {
                 isSmallMario = true;
             }

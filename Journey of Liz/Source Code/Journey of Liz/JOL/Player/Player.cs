@@ -17,20 +17,20 @@ using JOL.Classes.ItemClasses;
 namespace JOL
 {
     /// <summary>
-    /// This class handles the general management of the Mario character.
+    /// This class handles the general management of the player.
     /// </summary>
 
     public class Player
     {
         // Global variables
-        public IPlayerState State {get; set;}
-        public IPlayerSprite PlayerSprite {get; set;}
+        public IPlayerState playerState {get; set;}
+        public IPlayerSprite playerSprite {get; set;}
         public ContentManager myContent;
         public Level level;
         public Song song;
         public bool isInvulnerable;
         public bool isPaused;
-        public int MyState { get; set; }
+        public int myState { get; set; }
         
         private int coinScore = 100, OneUpScore = 1000;
         private int coinsToOneUp = 10;
@@ -41,9 +41,9 @@ namespace JOL
         // Basic Constructor
         public Player(Texture2D sprite, ContentManager content)
         {
-            PlayerSprite = new PlayerSpriteSmallIdle(content);
-            this.State = new PlayerStateSmallIdle(this);
-            MyState = 1;
+            playerSprite = new PlayerSpriteSmallIdle(content);
+            this.playerState = new PlayerStateSmallIdle(this);
+            myState = 1;
             myContent = content;
             isPaused = false;
         }
@@ -51,10 +51,10 @@ namespace JOL
         // Constructor with parameters for location and game state
         public Player(Texture2D sprite, ContentManager content, Vector2 location, bool isPaused)
         {
-            PlayerSprite = new PlayerSpriteSmallIdle(content);
-            this.State = new PlayerStateSmallIdle(this);
-            MyState = 1;
-            PlayerSprite.MoveTo((int)location.X, (int)location.Y);
+            playerSprite = new PlayerSpriteSmallIdle(content);
+            this.playerState = new PlayerStateSmallIdle(this);
+            myState = 1;
+            playerSprite.MoveTo((int)location.X, (int)location.Y);
             myContent = content;
             song = content.Load<Song>("Music/main_theme");
             MediaPlayer.Play(song);
@@ -74,30 +74,30 @@ namespace JOL
         public void Left()
         {
             if (!isPaused)
-                State.Left();
+                playerState.Left();
         }
 
         public void Right()
         {
             if (!isPaused)
-                State.Right();
+                playerState.Right();
         }
 
         public void Up()
         {
             if (!isPaused)
-                State.Up();
+                playerState.Up();
         }
 
         public void Down()
         {
             if (!isPaused)
-                State.Down();
+                playerState.Down();
         }
 
         public void Hit()
         {
-            State.Hit();
+            playerState.Hit();
         }
 
         public void Collect(IItem item)
@@ -118,23 +118,23 @@ namespace JOL
                     level.lives++;
                     level.score += OneUpScore;
                 }
-                else if (item is StarItem)
+                else if (item is StealthPotionItem)
                 {
                     starTimer = 10;
                     isInvulnerable = true;
                 }
-                else if (item is DeadMushroomItem)
+                else if (item is DeathPotionItem)
                 {
-                    State = new DeadMarioState(this);
-                    PlayerSprite = new PlayerSpriteDead(PlayerSprite);
+                    playerState = new PlayerStateDead(this);
+                    playerSprite = new PlayerSpriteDead(playerSprite);
                     level.lives--;
                     level.dyingAnimation = true;
                     MediaManager(2);
-                    PlayerSprite.soundInstance.Play();
+                    playerSprite.soundInstance.Play();
                 }
                 else
                 {
-                    State.Collect(item);
+                    playerState.Collect(item);
                 }
             }
             
@@ -152,26 +152,26 @@ namespace JOL
                     {
                         Random r = new Random();
                         alpha = (byte)r.Next(50, 150);
-                        PlayerSprite.tint = new Color(180, 180, 180, alpha);
+                        playerSprite.tint = new Color(180, 180, 180, alpha);
                         updateCounter = 5;
                     }
-                    PlayerSprite.tint = new Color(200, 200, 200, alpha);
+                    playerSprite.tint = new Color(200, 200, 200, alpha);
                     updateCounter--;
                 }
                 else
                 {
-                    PlayerSprite.tint = Color.White;
+                    playerSprite.tint = Color.White;
                     isInvulnerable = false;
                     updateCounter = 0;
                 }
-                State.Update(gameTime);
+                playerState.Update(gameTime);
             }
         }
 
         // Draw the sprites
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            PlayerSprite.Draw(spriteBatch, camera);
+            playerSprite.Draw(spriteBatch, camera);
         }
 
         // Teleport Mario to target location
@@ -179,7 +179,7 @@ namespace JOL
         {
             if (!isPaused)
             {
-                PlayerSprite.MoveTo(xPosition, yPosition);
+                playerSprite.MoveTo(xPosition, yPosition);
             }
         }
 

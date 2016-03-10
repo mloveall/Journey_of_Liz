@@ -56,7 +56,7 @@ namespace JOL.Classes.MiscClasses
 
         }
 
-        public void Warp(Player mario)
+        public void Warp(Player player)
         {
             if (!recentlyUsed)
             {
@@ -64,20 +64,20 @@ namespace JOL.Classes.MiscClasses
 
                 if (outPortal.facingLeft)
                 {
-                    x = outPortal.DestRectangle.X - mario.PlayerSprite.destRectangle.Width - outPortal.DestRectangle.Width;
+                    x = outPortal.DestRectangle.X - player.playerSprite.destRectangle.Width - outPortal.DestRectangle.Width;
                 }
                 else
                 {
                     x = outPortal.DestRectangle.X + outPortal.DestRectangle.Width;
                 }
 
-                y = outPortal.DestRectangle.Y + (mario.PlayerSprite.destRectangle.Y - this.DestRectangle.Y);
+                y = outPortal.DestRectangle.Y + (player.playerSprite.destRectangle.Y - this.DestRectangle.Y);
 
                 if (this.facingLeft == outPortal.facingLeft)
                 {
-                    mario.PlayerSprite.isFacingRight = !mario.PlayerSprite.isFacingRight;
+                    player.playerSprite.isFacingRight = !player.playerSprite.isFacingRight;
                 }
-                mario.MoveTo(x, y);
+                player.MoveTo(x, y);
                 this.recentlyUsed = true;
                 outPortal.recentlyUsed = true;
                 timeSinceUse = 0;

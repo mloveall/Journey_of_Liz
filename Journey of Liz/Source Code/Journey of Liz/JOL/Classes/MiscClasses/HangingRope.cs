@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace JOL.Classes.MiscClasses
 {
-    public class FlagPole
+    public class HangingRope
     {
         public Rectangle DestRectangle;
         public Rectangle CollisionRectangle;
@@ -17,7 +17,7 @@ namespace JOL.Classes.MiscClasses
         private int height = 304, width = 40;
         private int collidableWidth = 10;
 
-        public FlagPole(Texture2D texture, Vector2 location)
+        public HangingRope(Texture2D texture, Vector2 location)
         {
             DestRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
             CollisionRectangle = new Rectangle((int)location.X + width - collidableWidth, (int)location.Y, collidableWidth, height);

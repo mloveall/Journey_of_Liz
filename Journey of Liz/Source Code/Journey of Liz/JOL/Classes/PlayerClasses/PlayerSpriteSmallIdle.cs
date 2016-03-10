@@ -19,6 +19,8 @@ namespace JOL.Classes.PlayerClasses
             spriteHeight = 32;
             isMoving = false;
             isJumping = false;
+
+            Initialize(previousSprite);
         }
 
         public PlayerSpriteSmallIdle(ContentManager content) : base(content)
@@ -28,6 +30,8 @@ namespace JOL.Classes.PlayerClasses
             spriteHeight = 32;
             isMoving = false;
             isJumping = false;
+
+            Initialize();
         }
     }
 }

@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Graphics;
 namespace JOL
 {
     /// <summary>
-    /// This class manages the loading of different mario sprites.
+    /// This class manages the loading of different player sprites.
     /// </summary>
 
     public static class PlayerSpriteFactory

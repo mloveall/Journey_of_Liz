@@ -12,38 +12,30 @@ namespace JOL.Classes.BlockClasses
     /// The blue end of the portal block system.
     /// </summary>
 
-    class BluePortalBlock : IBlock
+    class BluePortalBlock : Block
     {
-        // Global variables
-        public Rectangle DestRectangle { get; set; }
         public int portalIndex;
-        public bool toDelete { get; set; }
-        public bool isAlive;
-        
+
         private int currentFrame = 0; //keeps track of which frame to use
         private int totalFrames = 3;
-        private int height = 32, width = 32;
 
         OrangePortalBlock outPortal;
-        Vector2 location;
-        Texture2D texture; //spritesheet for animation
-        Texture2D dead;
+        Texture2D usedTexture;
         float timer = 0f;
 
         // Constructor
-        public BluePortalBlock(Texture2D texture, Texture2D dead, Vector2 location, int portalIndex) 
+        public BluePortalBlock(Texture2D texture, Texture2D usedTexture, Vector2 location, int portalIndex) : base(texture, location)
         {
-            this.texture = texture;
-            this.dead = dead;
-            this.location = location;
-            DestRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
-            toDelete = false;
+            height = 32;
+            width = 32;
+            this.usedTexture = usedTexture;
             this.portalIndex = portalIndex;
-            isAlive = true;
+
+            Initialize();
         }
 
         // Update is called every frame
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
             //will produce the next frame to draw
             if (timer > 2.0f)
@@ -59,29 +51,29 @@ namespace JOL.Classes.BlockClasses
             }
         }
 
-        public void Reset()
+        public override void Reset()
         {
-            
+            isAlive = true;
         }
 
         // "SpriteBatch" will be the spritebatch used for this animation, "location" is where we want it drawn
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
+        public override void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
             Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
             Rectangle sourceRectangle = new Rectangle(width*currentFrame,0, width,height);
             if (isAlive)
                 spriteBatch.Draw(texture, relativeDestRectangle, sourceRectangle, Color.White);
             else
-                spriteBatch.Draw(dead, relativeDestRectangle, Color.White);
+                spriteBatch.Draw(usedTexture, relativeDestRectangle, Color.White);
         }
 
-        public void Bump(Player mario)
+        public override void Bump(Player player)
         {
             if (isAlive)
             {
-                int x = outPortal.DestRectangle.X;
-                int y = outPortal.DestRectangle.Y + mario.PlayerSprite.destRectangle.Height;
-                mario.MoveTo(x, y);
+                int x = outPortal.destRectangle.X;
+                int y = outPortal.destRectangle.Y + player.playerSprite.destRectangle.Height;
+                player.MoveTo(x, y);
             }
             outPortal.isAlive = true;
             isAlive = false;

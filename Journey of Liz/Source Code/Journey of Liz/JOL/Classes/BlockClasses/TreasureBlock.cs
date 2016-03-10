@@ -10,41 +10,33 @@ using Microsoft.Xna.Framework.Graphics;
 namespace JOL.Classes.BlockClasses
 {
     /// <summary>
-    /// A gift block that can be bumped to get rewards.
+    /// A treasure block that can be bumped to get rewards.
     /// </summary>
 
-    public class QuestionBlock : IBlock
+    class TreasureBlock : Block
     {
-        // Global variables
-        public Rectangle DestRectangle { get; set; }
-        public bool toDelete { get; set; }
-        public bool isAlive;
-        
         private int currentFrame = 0; //keeps track of which frame to use
         private int totalFrames = 3;
-        private int height = 32, width = 32;
         
         IItemContainer itemContainer;
         Texture2D aliveTexture, usedTexture; // Spritesheet for animation
-        Vector2 location;
         float timer = 0f;
 
         // Constructor
-        public QuestionBlock(Texture2D aliveTexture, Texture2D usedTexture, Vector2 location, IItemContainer itemContainer) 
+        public TreasureBlock(Texture2D aliveTexture, Texture2D usedTexture, Vector2 location, IItemContainer itemContainer) : base(aliveTexture, location)
         {
-            isAlive = true;
+            height = 32;
+            width = 32;
             this.aliveTexture = aliveTexture;
             this.usedTexture = usedTexture;
-            this.location = location;
-            DestRectangle = new Rectangle((int)location.X, (int)location.Y, width, height);
-            toDelete = false;
             this.itemContainer = itemContainer;
+
+            Initialize();
         }
 
-        // Update is called every frame
-        public void Update(GameTime gameTime)
+        public override void Update(GameTime gameTime)
         {
-            //will produce the next frame to draw
+            // Will produce the next frame to draw
             if (timer > 2.0f)
             {
                 currentFrame++;
@@ -56,16 +48,15 @@ namespace JOL.Classes.BlockClasses
             {
                 timer += 0.2f;
             }
-            
         }
 
-        public void Reset()
+        public override void Reset()
         {
             isAlive = true;
         }
 
-        // "SpriteBatch" will be the spritebatch used for this animation, "location" is where we want it drawn
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
+        // "spriteBatch" will be the sprite batch used for this animation, "location" is where we want it drawn
+        public override void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
             Rectangle relativeDestRectangle = new Rectangle((int)(location.X - camera.Position.X), (int)(location.Y - camera.Position.Y), width, height);
             if (isAlive)
@@ -79,11 +70,10 @@ namespace JOL.Classes.BlockClasses
             }
         }
 
-        // Bump is called when Mario hits the bottom of the block
-        public void Bump(Player mario)
+        public override void Bump(Player player)
         {
             bool isSmallMario = false;
-            if (mario.MyState == 1)
+            if (player.myState == 1)
             {
                 isSmallMario = true;
             }
