@@ -20,8 +20,8 @@ namespace JOL
     public interface IItem : IDeletable
     {
         bool isActive { get; set; }
-        Rectangle DestRectangle { get; set; }
-        float FallSpeed { get; set; }
+        Rectangle destRectangle { get; set; }
+        float fallSpeed { get; set; }
         void Update(GameTime gameTime);
         void Draw(SpriteBatch spriteBatch, ICamera camera);
         void Collect();

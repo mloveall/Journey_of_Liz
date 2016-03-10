@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using JOL.Classes.ItemClasses;
 
 namespace JOL
 {
@@ -18,6 +19,5 @@ namespace JOL
         {
             mario.Collect(new DeathPotionItem());
         }
-
     }
 }

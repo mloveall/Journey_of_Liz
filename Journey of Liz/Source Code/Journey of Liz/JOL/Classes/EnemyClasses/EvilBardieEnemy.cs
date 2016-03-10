@@ -14,73 +14,57 @@ using JOL.Interfaces;
 
 namespace JOL
 {
-    class EvilBardieEnemy : IEnemy
+    class EvilBardieEnemy : Enemy
     {
-        public bool toDelete { get; set; }
-        public enum KoopaState { offScreen, normal, stoppedShell, movingShell, transition, dead };
+        public enum EvilBardieState {
+            offScreen,
+            normal,
+            stoppedShell,
+            movingShell,
+            transition,
+            dead
+        };
 
-        Texture2D sprite;
-        KoopaState currentState;
+        EvilBardieState currentState;
 
-        SoundEffect sound;
-        SoundEffectInstance soundInstance;
-
-        public Rectangle DestRectangle { get; set; }
-        public bool IsAlive {get; set;}
-        
-        bool facingRight = false;
-
-        int xPosSource = 2, yPosSource = 2, xPosDest, yPosDest;
-        int magnifier = 2;
-
-        private static int KOOPA_SPEED = 2, SHELL_SPEED = 4;
-
-        public float FallSpeed { get; set; }
-
-        private static int HEIGHT = 24, WIDTH = 16;
-
-        int currentFrame = 0, frameDelayClock = 0, inShellFor = 0;
+        private static int NORMAL_SPEED = 2, SHELL_SPEED = 4;
         private static int NUMBER_OF_FRAMES = 2, FRAME_WIDTH = 20, FRAME_DELAY = 15;
-        private static int UNSHELL_TIME = 240, TRANSITION_TIME = 120, SHELL_FRAME=2, TRANSITION_FRAME=3;
+        private static int UNSHELL_TIME = 240, TRANSITION_TIME = 120, SHELL_FRAME = 2, TRANSITION_FRAME = 3;
 
-        public EvilBardieEnemy(Texture2D sprite, int xPos, int yPos)
+        private int currentFrame = 0, frameDelayClock = 0, inShellFor = 0;
+        private SoundEffect sound;
+        private SoundEffectInstance soundInstance;
+
+        public EvilBardieEnemy(Texture2D sprite, int xPos, int yPos) : base(sprite, xPos, yPos)
         {
-            this.sprite = sprite;
-            xPosDest = xPos;
-            yPosDest = yPos;
-            DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
-            currentState = KoopaState.normal;
-            toDelete = false;
+            height = 24;
+            width = 16;
+            currentState = EvilBardieState.normal;
+
+            Initialize();
         }
 
-        public EvilBardieEnemy(Texture2D sprite, SoundEffect sound, int xPos, int yPos)
+        public EvilBardieEnemy(Texture2D sprite, SoundEffect sound, int xPos, int yPos) : base(sprite, xPos, yPos)
         {
-            this.sprite = sprite;
-            xPosDest = xPos;
-            yPosDest = yPos;
-            DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
-            currentState = KoopaState.normal;
-            toDelete = false;
+            height = 24;
+            width = 16;
             this.sound = sound;
             soundInstance = sound.CreateInstance();
-            IsAlive = false;
+            currentState = EvilBardieState.normal;
+
+            Initialize();
         }
 
-        public EvilBardieEnemy()
+        public override void Update(GameTime gameTime)
         {
-            
-        }
-
-        public void Update(GameTime gameTime)
-        {
-            if (IsAlive)
+            if (isAlive)
             {
                 switch (currentState)
                 {
-                    case KoopaState.offScreen:
+                    case EvilBardieState.offScreen:
                         break;
 
-                    case KoopaState.normal:
+                    case EvilBardieState.normal:
                         frameDelayClock++;
                         if (frameDelayClock > FRAME_DELAY)
                         {
@@ -89,34 +73,32 @@ namespace JOL
                             currentFrame = currentFrame % NUMBER_OF_FRAMES;
                         }
 
-                        if (facingRight)
+                        if (isFacingRight)
                         {
-                            xPosDest += KOOPA_SPEED;
+                            xPosDest += NORMAL_SPEED;
                         }
                         else
                         {
-                            xPosDest -= KOOPA_SPEED;
+                            xPosDest -= NORMAL_SPEED;
                         }
 
-                        yPosDest += (int)FallSpeed;
-                        if (FallSpeed.CompareTo(10.0f) < 0)
+                        yPosDest += (int)fallSpeed;
+                        if (fallSpeed.CompareTo(10.0f) < 0)
                         {
-                            FallSpeed = FallSpeed * 1.05f;
+                            fallSpeed = fallSpeed * 1.05f;
                         }
-
                         break;
 
-                    case KoopaState.stoppedShell:
+                    case EvilBardieState.stoppedShell:
                         inShellFor++;
                         if (inShellFor > TRANSITION_TIME)
                         {
-                            currentState = KoopaState.transition;
+                            currentState = EvilBardieState.transition;
                         }
                         break;
 
-                    case KoopaState.movingShell:
-
-                        if (facingRight)
+                    case EvilBardieState.movingShell:
+                        if (isFacingRight)
                         {
                             xPosDest += SHELL_SPEED;
                         }
@@ -124,47 +106,46 @@ namespace JOL
                         {
                             xPosDest -= SHELL_SPEED;
                         }
-                        yPosDest += (int)FallSpeed;
-                        if (FallSpeed.CompareTo(10.0f) < 0)
+                        yPosDest += (int)fallSpeed;
+                        if (fallSpeed.CompareTo(10.0f) < 0)
                         {
-                            FallSpeed = FallSpeed * 1.05f;
+                            fallSpeed = fallSpeed * 1.05f;
                         }
-
                         break;
 
-                    case KoopaState.transition:
+                    case EvilBardieState.transition:
                         inShellFor++;
                         if (inShellFor > UNSHELL_TIME)
                         {
                             inShellFor = 0;
-                            currentState = KoopaState.normal;
+                            currentState = EvilBardieState.normal;
                         }
                         break;
-                    case KoopaState.dead:
+
+                    case EvilBardieState.dead:
                         break;
 
                     default:
                         break;
                 }
 
-                DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
+                destRectangle = new Rectangle(xPosDest, yPosDest, magnifier * width, magnifier * height);
             }
         }
 
-        public void Draw(SpriteBatch spriteBatch, ICamera camera)
+        public override void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
+            Rectangle relativeDestRectangle = new Rectangle((int)(destRectangle.X - camera.Position.X), (int)(destRectangle.Y - camera.Position.Y), magnifier * width, magnifier * height);
             Rectangle sourceRectangle;
 
             switch (currentState)
             {
-                case KoopaState.offScreen:
+                case EvilBardieState.offScreen:
                     break;
 
-                case KoopaState.normal:
-
-                    sourceRectangle = new Rectangle(xPosSource + currentFrame * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
-                    if (facingRight)
+                case EvilBardieState.normal:
+                    sourceRectangle = new Rectangle(xPosSource + currentFrame * FRAME_WIDTH, yPosSource, width, height);
+                    if (isFacingRight)
                     {
                         spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White, 0, Vector2.Zero, SpriteEffects.FlipHorizontally, 1);
                     }
@@ -172,29 +153,24 @@ namespace JOL
                     {
                         spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
                     }
-
                     break;
 
-                case KoopaState.stoppedShell:
-
-                    sourceRectangle = new Rectangle(xPosSource + SHELL_FRAME * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
+                case EvilBardieState.stoppedShell:
+                    sourceRectangle = new Rectangle(xPosSource + SHELL_FRAME * FRAME_WIDTH, yPosSource, width, height);
                     spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
-
                     break;
 
-                case KoopaState.movingShell:
-
-                    sourceRectangle = new Rectangle(xPosSource + SHELL_FRAME * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
+                case EvilBardieState.movingShell:
+                    sourceRectangle = new Rectangle(xPosSource + SHELL_FRAME * FRAME_WIDTH, yPosSource, width, height);
                     spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
-
                     break;
 
-                case KoopaState.transition:
-                    sourceRectangle = new Rectangle(xPosSource + TRANSITION_FRAME * FRAME_WIDTH, yPosSource, WIDTH, HEIGHT);
+                case EvilBardieState.transition:
+                    sourceRectangle = new Rectangle(xPosSource + TRANSITION_FRAME * FRAME_WIDTH, yPosSource, width, height);
                     spriteBatch.Draw(sprite, relativeDestRectangle, sourceRectangle, Color.White);
-
                     break;
-                case KoopaState.dead:
+
+                case EvilBardieState.dead:
                     break;
 
                 default:
@@ -203,20 +179,8 @@ namespace JOL
                 
         }
 
-        public void Flip()
-        {
-            facingRight = !facingRight;
-        }
-
-        public void MoveTo(int xPosition, int yPosition)
-        {
-            xPosDest = xPosition;
-            yPosDest = yPosition;
-            DestRectangle = new Rectangle(xPosition, yPosition, magnifier * WIDTH, magnifier * HEIGHT);
-        }
-
         // Returns whether the hit was dangerous for player
-        public bool Hit(CollisionDetection.CollisionType collisionType, bool hitRight) 
+        public override bool Hit(CollisionDetection.CollisionType collisionType, bool hitRight) 
         {
             bool isHit = false;
             switch (collisionType)
@@ -225,25 +189,24 @@ namespace JOL
                     soundInstance.Play();
                     switch (currentState)
                     {
-                        case KoopaState.normal:
-                            currentState = KoopaState.stoppedShell;
-                            
+                        case EvilBardieState.normal:
+                            currentState = EvilBardieState.stoppedShell;
                             break;
 
-                        case KoopaState.stoppedShell:
-                            currentState = KoopaState.movingShell;
-                            facingRight = hitRight;
+                        case EvilBardieState.stoppedShell:
+                            currentState = EvilBardieState.movingShell;
+                            isFacingRight = hitRight;
                             inShellFor = 0;
                             break;
 
-                        case KoopaState.movingShell:
-                            currentState = KoopaState.stoppedShell;
+                        case EvilBardieState.movingShell:
+                            currentState = EvilBardieState.stoppedShell;
                             
                             break;
 
-                        case KoopaState.transition:
-                            currentState = KoopaState.movingShell;
-                            facingRight = hitRight;
+                        case EvilBardieState.transition:
+                            currentState = EvilBardieState.movingShell;
+                            isFacingRight = hitRight;
                             inShellFor = 0;
                             break;
                     }
@@ -252,23 +215,23 @@ namespace JOL
                 case CollisionDetection.CollisionType.RightCollision:
                     switch (currentState)
                     {
-                        case KoopaState.normal:
+                        case EvilBardieState.normal:
                             isHit = true;
                             break;
 
-                        case KoopaState.stoppedShell:
-                            currentState = KoopaState.movingShell;
-                            facingRight = hitRight;
+                        case EvilBardieState.stoppedShell:
+                            currentState = EvilBardieState.movingShell;
+                            isFacingRight = hitRight;
                             inShellFor = 0;
                             break;
 
-                        case KoopaState.movingShell:
+                        case EvilBardieState.movingShell:
                             isHit = true;
                             break;
 
-                        case KoopaState.transition:
-                            currentState = KoopaState.movingShell;
-                            facingRight = hitRight;
+                        case EvilBardieState.transition:
+                            currentState = EvilBardieState.movingShell;
+                            isFacingRight = hitRight;
                             inShellFor = 0;
                             break;
                     }
@@ -276,23 +239,23 @@ namespace JOL
                 case CollisionDetection.CollisionType.BottomCollision:
                     switch (currentState)
                     {
-                        case KoopaState.normal:
+                        case EvilBardieState.normal:
                             isHit = true;
                             break;
 
-                        case KoopaState.stoppedShell:
-                            currentState = KoopaState.movingShell;
-                            facingRight = hitRight;
+                        case EvilBardieState.stoppedShell:
+                            currentState = EvilBardieState.movingShell;
+                            isFacingRight = hitRight;
                             inShellFor = 0;
                             break;
 
-                        case KoopaState.movingShell:
+                        case EvilBardieState.movingShell:
                             isHit = true;
                             break;
 
-                        case KoopaState.transition:
-                            currentState = KoopaState.movingShell;
-                            facingRight = hitRight;
+                        case EvilBardieState.transition:
+                            currentState = EvilBardieState.movingShell;
+                            isFacingRight = hitRight;
                             inShellFor = 0;
                             break;
                     }
@@ -300,10 +263,6 @@ namespace JOL
             }
             return isHit;
         }
-        
-
-
-        
     }
 }
 

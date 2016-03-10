@@ -18,9 +18,10 @@ namespace JOL
 
     public interface IEnemy : IDeletable
     {
-        Rectangle DestRectangle { get; set; }
-        float FallSpeed { get; set; }
-        bool IsAlive { get; set; }
+        Rectangle destRectangle { get; set; }
+        bool isAlive { get; set; }
+        float fallSpeed { get; set; }
+
         void Update(GameTime gameTime);
         void Draw(SpriteBatch spriteBatch, ICamera camera);
         void MoveTo(int xPosition, int yPosition);

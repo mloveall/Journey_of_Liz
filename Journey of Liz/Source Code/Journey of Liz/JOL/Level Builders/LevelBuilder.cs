@@ -305,7 +305,7 @@ namespace JOL
                                         }
                                     case 'u': // One-up mushroom
                                         {
-                                            items.Add(new OneUpMushroomItem(itemOneUpMushroomTexture, modifier + i * 32, j * 32, true));
+                                            items.Add(new OneUpHeartItem(itemOneUpMushroomTexture, modifier + i * 32, j * 32, true));
                                             break;
                                         }
                                     case 'c': // Coin
@@ -481,7 +481,7 @@ namespace JOL
                         }
                     case 'u': // One-up mushroom
                         {
-                            item = new OneUpMushroomItem(itemOneUpMushroomTexture, x, y, false);
+                            item = new OneUpHeartItem(itemOneUpMushroomTexture, x, y, false);
                             items.Add(item);
                             containerItems.Add(item);
                             break;

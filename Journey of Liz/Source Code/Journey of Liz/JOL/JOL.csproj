@@ -144,6 +144,8 @@
     <Compile Include="Classes\BlockClasses\BounceBlock.cs" />
     <Compile Include="Classes\BlockClasses\SandBlock.cs" />
     <Compile Include="Classes\BlockClasses\GrassBlock.cs" />
+    <Compile Include="Classes\EnemyClasses\Enemy.cs" />
+    <Compile Include="Classes\ItemClasses\Item.cs" />
     <Compile Include="Classes\MiscClasses\Tree.cs" />
     <Compile Include="Classes\MiscClasses\Cloud.cs" />
     <Compile Include="Classes\MiscClasses\InstructionTwo.cs" />

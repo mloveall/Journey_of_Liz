@@ -10,6 +10,10 @@ using Microsoft.Xna.Framework.Audio;
 
 namespace JOL.Classes.PlayerClasses
 {
+    /// <summary>
+    /// A general player sprite class that is being used as the parent of every specific player sprite.
+    /// </summary>
+    
     class PlayerSprite : IPlayerSprite
     {
         public Texture2D sprite { get; set; }

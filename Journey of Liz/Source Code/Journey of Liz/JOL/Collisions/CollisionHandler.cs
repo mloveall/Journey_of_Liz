@@ -6,6 +6,7 @@ using JOL.Interfaces;
 using JOL.PlayerStates;
 using JOL.Classes.PlayerClasses;
 using JOL.Classes.BlockClasses;
+using JOL.Classes.ItemClasses;
 using JOL.Classes.MiscClasses;
 
 namespace JOL
@@ -120,18 +121,18 @@ namespace JOL
             {
                 foreach (IBlock block in blocks)
                 {
-                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(enemy.DestRectangle, block.destRectangle);
+                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(enemy.destRectangle, block.destRectangle);
                     switch (collision)
                     {
                         case CollisionDetection.CollisionType.NoCollision:
-                            if (enemy.FallSpeed.CompareTo(0.0f) == 0)
+                            if (enemy.fallSpeed.CompareTo(0.0f) == 0)
                             {
-                                enemy.FallSpeed = 1.5f;
+                                enemy.fallSpeed = 1.5f;
                             }
                             break;
                         case CollisionDetection.CollisionType.TopCollision:
-                            enemy.FallSpeed = 0f;
-                            enemy.MoveTo(enemy.DestRectangle.Left, block.destRectangle.Top - enemy.DestRectangle.Height);
+                            enemy.fallSpeed = 0f;
+                            enemy.MoveTo(enemy.destRectangle.Left, block.destRectangle.Top - enemy.destRectangle.Height);
                             break;
                         case CollisionDetection.CollisionType.BottomCollision:
                             break;
@@ -157,18 +158,18 @@ namespace JOL
                 {
                     foreach (IBlock block in blocks)
                     {
-                        CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(item.DestRectangle, block.destRectangle);
+                        CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(item.destRectangle, block.destRectangle);
                         switch (collision)
                         {
                             case CollisionDetection.CollisionType.NoCollision:
-                                if (item.FallSpeed.CompareTo(0.0f) == 0)
+                                if (item.fallSpeed.CompareTo(0.0f) == 0)
                                 {
-                                    item.FallSpeed = 1.5f;
+                                    item.fallSpeed = 1.5f;
                                 }
                                 break;
                             case CollisionDetection.CollisionType.TopCollision:
-                                item.FallSpeed = 0f;
-                                item.MoveTo(item.DestRectangle.Left, block.destRectangle.Top - item.DestRectangle.Height);
+                                item.fallSpeed = 0f;
+                                item.MoveTo(item.destRectangle.Left, block.destRectangle.Top - item.destRectangle.Height);
                                 break;
                             case CollisionDetection.CollisionType.BottomCollision:
                                 break;
@@ -197,7 +198,7 @@ namespace JOL
                 {
                     IEnemy enemy2 = enemies[j];
 
-                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(enemy1.DestRectangle, enemy2.DestRectangle);
+                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(enemy1.destRectangle, enemy2.destRectangle);
                     switch (collision)
                     {
                         case CollisionDetection.CollisionType.NoCollision:
@@ -235,7 +236,7 @@ namespace JOL
                 {
                     IItem item2 = items[j];
 
-                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(item1.DestRectangle, item2.DestRectangle);
+                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(item1.destRectangle, item2.destRectangle);
                     switch (collision)
                     {
                         case CollisionDetection.CollisionType.NoCollision:
@@ -269,7 +270,7 @@ namespace JOL
             {
                 if (item.isActive)
                 {
-                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.playerSprite.destRectangle, item.DestRectangle);
+                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(mario.playerSprite.destRectangle, item.destRectangle);
                     switch (collision)
                     {
                         case CollisionDetection.CollisionType.NoCollision:
@@ -294,7 +295,7 @@ namespace JOL
             {
                 foreach (IEnemy enemy in enemies)
                 {
-                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(player.playerSprite.destRectangle, enemy.DestRectangle);
+                    CollisionDetection.CollisionType collision = CollisionDetection.DetectCollision(player.playerSprite.destRectangle, enemy.destRectangle);
                     if (collision != CollisionDetection.CollisionType.NoCollision && player.myState != 0)
                     {
                         bool hitMario = enemy.Hit(collision, true);
@@ -396,11 +397,11 @@ namespace JOL
         {
             foreach (IEnemy e in enemies)
             {
-                if (!e.IsAlive)
+                if (!e.isAlive)
                 {
-                    if (camera.IsInView(e.DestRectangle))
+                    if (camera.IsInView(e.destRectangle))
                     {
-                        e.IsAlive = true;
+                        e.isAlive = true;
                     }
                 }
             }

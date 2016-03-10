@@ -8,6 +8,10 @@ using Microsoft.Xna.Framework.Graphics;
 
 namespace JOL.Classes.BlockClasses
 {
+    /// <summary>
+    /// A general block class that is being used as the parent of every specific block.
+    /// </summary>
+
     public class Block : IBlock
     {
         // Global variables
@@ -15,8 +19,9 @@ namespace JOL.Classes.BlockClasses
         public Texture2D texture { get; set; }
         public bool toDelete { get; set; }
         public bool isAlive { get; set; }
+        public int height { get; protected set; }
+        public int width { get; protected set; }
 
-        protected int height = 32, width = 32;
         protected Vector2 location;
 
         // Constructor

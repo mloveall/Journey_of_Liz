@@ -17,10 +17,10 @@ namespace JOL
     {
         public bool toDelete { get; set; }
         Texture2D sprite;
-        public Rectangle DestRectangle { get; set; }
+        public Rectangle destRectangle { get; set; }
         public bool isActive { get; set; }
         bool isSpawning = false;
-        public float FallSpeed { get; set; }
+        public float fallSpeed { get; set; }
         int xPosDest, yPosDest;
         int xPosSource = 2, yPosSource = 2, magnifier = 2;
         int currentFrame = 0, frameDelayClock=0, spawnHeight=0;
@@ -38,7 +38,7 @@ namespace JOL
             this.sprite = sprite;
             xPosDest = xPos;
             yPosDest = yPos;
-            DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
+            destRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
             toDelete = false;
             this.isActive = isActive;
         }
@@ -48,7 +48,7 @@ namespace JOL
             this.sprite = sprite;
             xPosDest = xPos;
             yPosDest = yPos;
-            DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
+            destRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
             toDelete = false;
             this.isActive = isActive;
             this.sound = sound;
@@ -81,12 +81,12 @@ namespace JOL
                     currentFrame = currentFrame % NUMBER_OF_FRAMES;
                 }
             }
-            DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
+            destRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
         }
 
         public void Draw(SpriteBatch spriteBatch, ICamera camera)
         {
-            Rectangle relativeDestRectangle = new Rectangle((int)(DestRectangle.X - camera.Position.X), (int)(DestRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
+            Rectangle relativeDestRectangle = new Rectangle((int)(destRectangle.X - camera.Position.X), (int)(destRectangle.Y - camera.Position.Y), magnifier * WIDTH, magnifier * HEIGHT);
             if (isActive || isSpawning)
             {
                 FRAME_WIDTH = sprite.Width / NUMBER_OF_FRAMES;
@@ -99,13 +99,13 @@ namespace JOL
         {
             isActive = false;
             toDelete = true;
-            DestRectangle = new Rectangle(1800, 1800, magnifier * WIDTH, magnifier * HEIGHT);
+            destRectangle = new Rectangle(1800, 1800, magnifier * WIDTH, magnifier * HEIGHT);
         }
 
         public void Reset()
         {
             isActive = true;
-            DestRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
+            destRectangle = new Rectangle(xPosDest, yPosDest, magnifier * WIDTH, magnifier * HEIGHT);
         }
 
         public void Spawn()
@@ -123,7 +123,7 @@ namespace JOL
         {
             xPosDest = xPosition;
             yPosDest = yPosition;
-            DestRectangle = new Rectangle(xPosition, yPosition, magnifier * WIDTH, magnifier * HEIGHT);
+            destRectangle = new Rectangle(xPosition, yPosition, magnifier * WIDTH, magnifier * HEIGHT);
         }
     }
 }

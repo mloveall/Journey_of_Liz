@@ -113,7 +113,7 @@ namespace JOL
                         level.lives++;
                     }
                 }
-                else if (item is OneUpMushroomItem)
+                else if (item is OneUpHeartItem)
                 {
                     level.lives++;
                     level.score += OneUpScore;
